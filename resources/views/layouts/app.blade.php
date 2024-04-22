@@ -24,7 +24,7 @@
     
     <body class="font-sans antialiased">
         <div class="app-container bg-white overflow-y-auto flex flex-col">
-            <header class="h-20 flex items-center justify-between px-6 py-4" x-data="{ open: false }">
+            <header class="h-20 flex items-center justify-between px-6 pt-4" x-data="{ open: false }">
                 <button type="button" class="text-[28px]" x-on:click="open = !open">
                     <i class="fas fa-bars"></i>
                 </button>

@@ -3,7 +3,7 @@
 @section('header')
     <div class="px-6 py-4 flex items-center justify-between gap-4 border-b border-black">
         <div>
-            <h1 class="text-3xl font-bold mb-2">Contact</h1>
+            <h1 class="text-2xl font-bold mb-2">Contact</h1>
 
             <p>
                 Heb je een vraag?
