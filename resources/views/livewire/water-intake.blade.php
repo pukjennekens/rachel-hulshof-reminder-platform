@@ -2,7 +2,7 @@
 
     {{-- Reset button --}}
     <div>
-        <button class="font-bold inline-flex items-center rounded-full border border-black hover:bg-black hover:text-white transition icon-button" wire:click="decrement">
+        <button class="font-bold inline-flex items-center rounded-full border border-black hover:bg-black hover:text-white transition icon-button touch-manipulation" wire:click="decrement">
             <x-icon name="glasdrinken v2" />
         </button>
     </div>
@@ -18,7 +18,7 @@
 
     {{-- Increment button --}}
     <div>
-        <button class="font-bold inline-flex items-center rounded-full border border-black hover:bg-black hover:text-white transition icon-button" wire:click="increment">
+        <button class="font-bold inline-flex items-center rounded-full border border-black hover:bg-black hover:text-white transition icon-button touch-manipulation" wire:click="increment">
             <x-icon name="hartje" />
         </button>
     </div>
