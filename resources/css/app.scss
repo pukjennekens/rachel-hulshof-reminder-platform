@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+    @apply h-full;
+}
+
+body {
+    @screen md {
+        @apply flex justify-center items-center bg-gray-100;
+    }
+}
+
+.app-container {
+    @apply h-full relative;
+
+    @screen md {
+        @apply max-w-xl mx-auto border h-[90vh] min-h-[600px] w-full;
+    }
+}
+
+.shadow-top::before {
+    content: "";
+    @apply absolute -top-2 left-0 right-0 h-2 bg-gradient-to-b from-gray-200 to-transparent z-10 transform rotate-180;
+}
+
+.icon-wrapper svg path {
+    @apply stroke-black stroke-[20px] #{!important};
+}
+
+.icon-button:hover {
+    svg,
+    path {
+        @apply fill-white;
+    }
+}
+
+.button:not(.icon-button).loading {
+    @apply cursor-progress;
+
+    &::after {
+        content: "...";
+    }
+}
+
+.top-shadow {
+    box-shadow: 0px -4px 3px rgba(50, 50, 50, 0.4);
+}
