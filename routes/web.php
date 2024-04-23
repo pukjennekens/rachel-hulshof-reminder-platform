@@ -6,6 +6,17 @@ Route::view('/login', 'pages.auth.login')
     ->name('login')
     ->middleware('guest');
 
+Route::get('/logout', function () {
+        auth()->logout();
+        return redirect()->route('login');
+    })
+    ->name('logout')
+    ->middleware('auth');
+
+Route::view('/register', 'pages.auth.register')
+    ->name('register')
+    ->middleware('guest');
+
 Route::view('/', 'pages.dashboard')
     ->name('dashboard')
     ->middleware('auth');
