@@ -6,6 +6,7 @@ export default {
         "./resources/**/*.blade.php",
         "./resources/**/*.js",
         "./resources/**/*.vue",
+        "./vendor/robsontenorio/mary/src/View/Components/**/*.php",
     ],
     theme: {
         extend: {
@@ -18,5 +19,5 @@ export default {
             },
         },
     },
-    plugins: [],
+    plugins: [require("daisyui")],
 };

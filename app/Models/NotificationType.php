@@ -17,4 +17,27 @@ class NotificationType extends Model
     {
         return $this->hasMany(UserNotificationPreference::class);
     }
+
+    /**
+     * Get the daily check offs for the notification type.
+     * 
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function dailyCheckOffs(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
+        return $this->hasMany(DailyCheckOff::class);
+    }
+
+    /**
+     * Handle deleting the notification type.
+     * 
+     * @return void
+     */
+    public function delete(): void
+    {
+        $this->userNotificationPreferences()->delete();
+        $this->dailyCheckOffs()->delete();
+
+        parent::delete();
+    }
 }

@@ -22,6 +22,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'is_admin',
     ];
 
     /**
@@ -44,6 +45,7 @@ class User extends Authenticatable
         return [
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
+            'is_admin' => 'boolean',
         ];
     }
 
@@ -174,5 +176,32 @@ class User extends Authenticatable
     public function getEnabledNotificationsCountAttribute(): int
     {
         return $this->notificationPreferences->count();
+    }
+
+    /**
+     * Get the users daily check offs
+     * 
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function dailyCheckOffs(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
+        return $this->hasMany(DailyCheckOff::class);
+    }
+
+    /**
+     * Handle deleting the user
+     * 
+     * @return void
+     */
+    protected static function boot(): void
+    {
+        parent::boot();
+
+        static::deleting(function ($user) {
+            $user->weightMeasurements()->delete();
+            $user->waterIntakeLogs()->delete();
+            $user->notificationPreferences()->delete();
+            $user->dailyCheckOffs()->delete();
+        });
     }
 }

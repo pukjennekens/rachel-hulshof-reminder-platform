@@ -25,3 +25,7 @@ Route::view('/notifications', 'pages.notifications')
 Route::view('/help', 'pages.help')
     ->name('help')
     ->middleware('auth');
+    
+Route::view('/admin', 'pages.admin.dashboard')
+    ->name('admin.dashboard')
+    ->middleware('auth', 'is-admin');
