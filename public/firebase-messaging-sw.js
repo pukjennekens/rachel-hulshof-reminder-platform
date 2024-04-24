@@ -1,21 +1,18 @@
 // firebase-messaging-sw.js
+importScripts("https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js");
 importScripts(
-    "https://www.gstatic.com/firebasejs/9.0.2/firebase-app-compat.js"
-);
-importScripts(
-    "https://www.gstatic.com/firebasejs/9.0.2/firebase-messaging-compat.js"
+    "https://www.gstatic.com/firebasejs/8.10.1/firebase-messaging.js"
 );
 
-const firebaseConfig = {
+firebase.initializeApp({
     apiKey: "AIzaSyD7BqYYPiGw-rOuTpB0mRn6y_7x6FKJ-XI",
     authDomain: "rachel-hulshof.firebaseapp.com",
     projectId: "rachel-hulshof",
     storageBucket: "rachel-hulshof.appspot.com",
     messagingSenderId: "324732111099",
     appId: "1:324732111099:web:6ae241d6dbe33aae16485e",
-};
+});
 
-firebase.initializeApp(firebaseConfig);
 const messaging = firebase.messaging();
 
 messaging.onBackgroundMessage((payload) => {
@@ -24,13 +21,12 @@ messaging.onBackgroundMessage((payload) => {
         payload
     );
 
-    const notificationTitle = payload.notification.title;
-    const notificationOptions = {
-        body: payload.notification.body,
-        icon: payload.notification.icon,
+    const title = "Bericht titel";
+    const notification = {
+        body: "Lorem ipsum",
+        icon: "/images/logos/slinc-logo-512-512.png",
     };
 
-    console.log(notificationTitle, notificationOptions);
-
-    // self.registration.showNotification(notificationTitle, notificationOptions);
+    // Show notification
+    self.registration.showNotification(title, notification);
 });
