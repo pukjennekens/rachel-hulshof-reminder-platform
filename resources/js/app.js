@@ -8,6 +8,9 @@ import { getMessaging, getToken } from "firebase/messaging";
 
 Alpine.store("global", {
     notificationsDrawerOpen: false,
+    requestNotificationPermission() {
+        requestPermission();
+    },
 });
 
 Livewire.start();
@@ -54,5 +57,3 @@ function requestPermission() {
         }
     });
 }
-
-requestPermission();

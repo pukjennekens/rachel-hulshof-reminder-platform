@@ -64,7 +64,11 @@
         x-transition:leave-start="transform translate-y-0"
         x-transition:leave-end="transform translate-y-full"
     >
-        <div class="flex items-center justify-end gap-4">
+        <div class="flex items-center justify-between gap-4">
+            <x-button type="button" x-on:click="$store.global.requestNotificationPermission()">
+                Notificaties ontvangen
+            </x-button>
+
             <x-button type="button" class="bg-black text-primary hover:bg-white hover:!text-black" x-on:click="$store.global.notificationsDrawerOpen = false">
                 Gereed
             </x-button>
