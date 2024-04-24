@@ -21,12 +21,12 @@ messaging.onBackgroundMessage((payload) => {
         payload
     );
 
-    const title = "Bericht titel";
-    const notification = {
-        body: "Lorem ipsum",
-        icon: "/images/logos/slinc-logo-512-512.png",
+    const title = payload.notification.title;
+    const notificationOptions = {
+        body: payload.notification.body,
+        icon: payload.notification.icon,
     };
 
     // Show notification
-    self.registration.showNotification(title, notification);
+    self.registration.showNotification(title, notificationOptions);
 });
