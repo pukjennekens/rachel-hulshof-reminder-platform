@@ -21,6 +21,13 @@
 
         <script src="https://js.pusher.com/beams/1.0/push-notifications-cdn.js"></script>
 
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon" href="/images/logos/slinc-logo-192x192.png">
+        <link rel="apple-touch-startup-image" href="/images/logos/slinc-logo-192x192.png">
+        <link rel="manifest" href="/manifest.json">
+        <meta name="theme-color" content="#efd6db">
+
         @livewireStyles
     </head>
     
