@@ -19,6 +19,8 @@
         <!-- Scripts -->
         @vite(['resources/js/app.js', 'resources/css/app.scss'])
 
+        <script src="https://js.pusher.com/beams/1.0/push-notifications-cdn.js"></script>
+
         @livewireStyles
     </head>
     
@@ -138,5 +140,16 @@
         </div>
 
         @livewireScriptConfig
+
+        <script>
+  const beamsClient = new PusherPushNotifications.Client({
+    instanceId: '6b576853-bc29-4226-bf0e-edad6ff216ec',
+  });
+
+  beamsClient.start()
+    .then(() => beamsClient.addDeviceInterest('hello'))
+    .then(() => console.log('Successfully registered and subscribed!'))
+    .catch(console.error);
+</script>
     </body>
 </html>
