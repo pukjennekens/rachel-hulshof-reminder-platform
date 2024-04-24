@@ -14,6 +14,11 @@ class NotificationsPanel extends Component
      */
     public $notificationTypes;
 
+    /**
+     * @var array<int, string>
+     */
+    public array $notificationTimes;
+
     public function mount()
     {
         $this->loadNotificationTypes();
@@ -26,7 +31,11 @@ class NotificationsPanel extends Component
         $this->notificationTypes = auth()->user()->notificationPreferences
             ->sortBy('notification_time')
             ->map(function ($notificationPreference) {
-                return $notificationPreference->notificationType;
+                $notificationType = $notificationPreference->notificationType;
+
+                $this->notificationTimes[$notificationType->id] = Carbon::parse($notificationPreference->notification_time)->format('H:i');
+
+                return $notificationType;
             });
     }
 
