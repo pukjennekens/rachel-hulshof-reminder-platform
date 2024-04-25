@@ -4,12 +4,22 @@ import {
     Alpine,
 } from "../../vendor/livewire/livewire/dist/livewire.esm";
 import { initializeApp } from "firebase/app";
-import { getMessaging, getToken } from "firebase/messaging";
+import { getMessaging, getToken, onMessage } from "firebase/messaging";
+import axios from "axios";
+
+axios.defaults.headers.common["X-CSRF-TOKEN"] = document
+    .querySelector('meta[name="csrf-token"]')
+    .getAttribute("content");
 
 Alpine.store("global", {
     notificationsDrawerOpen: false,
     requestNotificationPermission() {
         requestPermission();
+    },
+    notification: {
+        title: "",
+        body: "",
+        show: false,
     },
 });
 
@@ -60,3 +70,11 @@ async function setToken() {
             // ...
         });
 }
+
+onMessage(messaging, (payload) => {
+    Alpine.store("global").notification = {
+        title: payload.notification.title,
+        body: payload.notification.body,
+        show: true,
+    };
+});

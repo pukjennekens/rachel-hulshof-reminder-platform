@@ -2,7 +2,10 @@
 
 namespace App\Models;
 
+use App\Jobs\SendNotification;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Schedule;
 
 class UserNotificationPreference extends Model
 {
@@ -26,5 +29,41 @@ class UserNotificationPreference extends Model
     public function notificationType(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
         return $this->belongsTo(NotificationType::class);
+    }
+
+    /**
+     * On create or update, set the schedule for the job to send the notification
+     * 
+     * @return void
+     */
+    protected static function booted(): void
+    {
+        static::created(function (UserNotificationPreference $userNotificationPreference) {
+            Log::debug('User notification preference saved: ' . $userNotificationPreference->id);
+            self::scheduleNotification($userNotificationPreference);
+        });
+
+        static::updated(function (UserNotificationPreference $userNotificationPreference) {
+            Log::debug('User notification preference updated: ' . $userNotificationPreference->id);
+            self::scheduleNotification($userNotificationPreference);
+        });
+    }
+
+    /**
+     * Schedule the notification job
+     * 
+     * @param UserNotificationPreference $userNotificationPreference
+     * @return void
+     */
+    private static function scheduleNotification(UserNotificationPreference $userNotificationPreference): void
+    {
+        Log::debug('Scheduling notification for user: ' . $userNotificationPreference->user_id);
+        $jobName          = 'SendNotification-' . $userNotificationPreference->id;
+        $notificationTime = $userNotificationPreference->notification_time;
+
+        Schedule::job(new SendNotification($userNotificationPreference))
+            ->dailyAt($notificationTime)
+            ->name($jobName)
+            ->onOneServer();
     }
 }

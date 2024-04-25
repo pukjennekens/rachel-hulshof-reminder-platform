@@ -6,6 +6,9 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="theme-color" content="#efd6db">
 
         <title>{{ config('app.name', 'Laravel') }}</title>
 
@@ -21,17 +24,35 @@
 
         <script src="https://js.pusher.com/beams/1.0/push-notifications-cdn.js"></script>
 
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black">
         <link rel="apple-touch-icon" href="/images/logos/slinc-logo-192x192.png">
         <link rel="apple-touch-startup-image" href="/images/logos/slinc-logo-192x192.png">
         <link rel="manifest" href="/manifest.json">
-        <meta name="theme-color" content="#efd6db">
 
         @livewireStyles
     </head>
     
     <body class="font-sans antialiased">
+        <div
+            class="fixed top-0 left-0 right-0 bg-primary p-4 text-black z-[60]"
+            x-data
+            x-show="$store.global.notification.show"
+            x-transition:enter="transition ease-out duration-300"
+            x-transition:enter-start="opacity-0 transform -translate-y-full"
+            x-transition:enter-end="opacity-100 transform translate-y-0"
+            x-transition:leave="transition ease-in duration-300"
+            x-transition:leave-start="opacity-100 transform translate-y-0"
+            x-transition:leave-end="opacity-0 transform -translate-y-full"
+        >
+            <div class="flex flex-col relative w-full">
+                <strong class="font-bold text-lg" x-text="$store.global.notification.title"></strong>
+                <span class="text-sm" x-text="$store.global.notification.body"></span>
+
+                <button type="button" class="absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2" x-on:click="$store.global.notification.show = false">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+
         <div class="app-container bg-white overflow-y-auto flex flex-col">
             <header class="h-20 flex items-center justify-between px-6 pt-4" x-data="{ open: false }">
                 <button type="button" class="text-[28px]" x-on:click="open = !open">
