@@ -104,34 +104,34 @@
                 @yield('content')
             </main>
 
-            <footer class="w-full bg-white h-20 shadow-top z-40 flex items-center justify-center gap-6 top-shadow">
+            <footer class="w-full bg-white h-24 shadow-top z-40 flex items-center justify-center gap-6 top-shadow pb-6">
                 {{-- Active classes: underline font-bold underline-offset-2 --}}
 
                 <a href="{{ route('dashboard') }}" class="inline-flex flex-col items-center">
-                    <x-icon name="hartslag" size="w-[1.5rem] h-[1.5rem] sm:w-[2rem] sm:h-[2rem]" />
-                    <span class="text-[0.5rem] sm:text-xs {{ request()->routeIs('dashboard') ? 'underline font-bold underline-offset-2' : '' }}">Dashboard</span>
+                    <x-icon name="hartslag" size="w-[1.75rem] h-[1.7rem] sm:w-[2rem] sm:h-[2rem]" />
+                    <span class="text-[0.6rem] sm:text-xs {{ request()->routeIs('dashboard') ? 'underline font-bold underline-offset-2' : '' }}">Dashboard</span>
                 </a>
 
                 <a href="{{ route('weight') }}" class="inline-flex flex-col items-center">
-                    <x-icon name="weegschaal" size="w-[1.5rem] h-[1.5rem] sm:w-[2rem] sm:h-[2rem]" />
-                    <span class="text-[0.5rem] sm:text-xs {{ request()->routeIs('weight') ? 'underline font-bold underline-offset-2' : '' }}">Mijn gewicht</span>
+                    <x-icon name="weegschaal" size="w-[1.75rem] h-[1.7rem] sm:w-[2rem] sm:h-[2rem]" />
+                    <span class="text-[0.6rem] sm:text-xs {{ request()->routeIs('weight') ? 'underline font-bold underline-offset-2' : '' }}">Mijn gewicht</span>
                 </a>
 
                 <a href="{{ route('water') }}" class="inline-flex flex-col items-center">
-                    <x-icon name="glas drinken" size="w-[1.5rem] h-[1.5rem] sm:w-[2rem] sm:h-[2rem]" />
-                    <span class="text-[0.5rem] sm:text-xs {{ request()->routeIs('water') ? 'underline font-bold underline-offset-2' : '' }}">Water</span>
+                    <x-icon name="glas drinken" size="w-[1.75rem] h-[1.7rem] sm:w-[2rem] sm:h-[2rem]" />
+                    <span class="text-[0.6rem] sm:text-xs {{ request()->routeIs('water') ? 'underline font-bold underline-offset-2' : '' }}">Water</span>
                 </a>
 
                 <a href="{{ route('notifications') }}" class="inline-flex flex-col items-center">
-                    <x-icon name="timer" size="w-[1.5rem] h-[1.5rem] sm:w-[2rem] sm:h-[2rem]" />
-                    <span class="text-[0.5rem] sm:text-xs {{ request()->routeIs('notifications') ? 'underline font-bold underline-offset-2' : '' }}">Mijn eetmomenten</span>
+                    <x-icon name="timer" size="w-[1.75rem] h-[1.7rem] sm:w-[2rem] sm:h-[2rem]" />
+                    <span class="text-[0.6rem] sm:text-xs {{ request()->routeIs('notifications') ? 'underline font-bold underline-offset-2' : '' }}">Mijn eetmomenten</span>
                 </a>
 
                 <a href="https://rachelhulshof.nl/slinc-webshop/" target="_blank" class="inline-flex flex-col items-center relative">
                     <i class="fa-solid fa-arrow-up-right-from-square text-[0.5rem] absolute right-0 top-0"></i>
 
-                    <x-icon name="telefoon" size="w-[1.5rem] h-[1.5rem] sm:w-[2rem] sm:h-[2rem]" />
-                    <span class="text-[0.5rem] sm:text-xs">Slinc shop</span>
+                    <x-icon name="telefoon" size="w-[1.75rem] h-[1.7rem] sm:w-[2rem] sm:h-[2rem]" />
+                    <span class="text-[0.6rem] sm:text-xs">Slinc shop</span>
                 </a>
             </footer>
 

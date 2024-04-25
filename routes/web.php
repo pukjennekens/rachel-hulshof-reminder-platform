@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Route;
 
 Route::view('/login', 'pages.auth.login')
@@ -40,3 +41,17 @@ Route::view('/help', 'pages.help')
 Route::view('/admin', 'pages.admin.dashboard')
     ->name('admin.dashboard')
     ->middleware('auth', 'is-admin');
+
+Route::post('/fcm-token', function() {
+    if(!auth()->user()) {
+        return response()->json(['message' => 'Unauthenticated'], 401);
+    }
+
+    $user = auth()->user();
+    $user->fcm_token = request('token');
+    $user->save();
+
+    return response()->json(['message' => 'Token saved']);
+})
+    ->name('fcm-token')
+    ->middleware('auth');

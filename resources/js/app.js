@@ -55,19 +55,22 @@ async function setToken() {
     })
         .then((currentToken) => {
             if (currentToken) {
-                // Send the token to your server and update the UI if necessary
                 console.log("Token available: ", currentToken);
+
+                if (localStorage.getItem("token") !== currentToken) {
+                    console.log("Dispatching user-fcm-token-updated event.");
+                    axios.post("/fcm-token", {
+                        token: currentToken,
+                    });
+                }
             } else {
-                // Show permission request UI
                 console.log(
-                    "No registration token available. Request permission to generate one."
+                    "No token available. Request permission to generate one."
                 );
-                // ...
             }
         })
         .catch((err) => {
             console.log("An error occurred while retrieving token. ", err);
-            // ...
         });
 }
 
@@ -78,3 +81,5 @@ onMessage(messaging, (payload) => {
         show: true,
     };
 });
+
+setToken();
