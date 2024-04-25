@@ -54,6 +54,8 @@ function requestPermission() {
 }
 
 async function setToken() {
+    Alpine.store("global").notificationsMessage = { show: false };
+
     getToken(messaging, {
         vapidKey:
             "BFYOLtctynyZkq1RPBmIRjg81fqTGnYbLiGSLa381WMDzLt0duFuY7C0Z1_5ED-DpOP_KuYh2-DmmhLbuNGQZFw",

@@ -123,7 +123,7 @@
                     Meldingen inschakelen
                 </x-button>
 
-                <button type="button" class="absolute top-0 right-0 p-2">
+                <button type="button" class="absolute top-0 right-0 p-2" x-on:click="$store.global.notificationsMessage.show = false">
                     <i class="fas fa-times"></i>
                 </button>
             </div>
