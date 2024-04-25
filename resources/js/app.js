@@ -21,6 +21,9 @@ Alpine.store("global", {
         body: "",
         show: false,
     },
+    notificationsMessage: {
+        show: false,
+    },
 });
 
 Livewire.start();
@@ -40,6 +43,8 @@ function requestPermission() {
     if (window.Notification.permission === "granted") {
         setToken();
     } else {
+        Alpine.store("global").notificationsMessage = { show: true };
+
         window.Notification.requestPermission((value) => {
             if (value == "granted") {
                 setToken();
@@ -64,9 +69,7 @@ async function setToken() {
                     });
                 }
             } else {
-                console.log(
-                    "No token available. Request permission to generate one."
-                );
+                Alpine.store("global").notificationsMessage = { show: true };
             }
         })
         .catch((err) => {
@@ -82,4 +85,4 @@ onMessage(messaging, (payload) => {
     };
 });
 
-setToken();
+requestPermission();

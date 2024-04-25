@@ -66,7 +66,7 @@
     >
         <div class="flex items-center justify-between gap-4">
             <x-button type="button" x-on:click="$store.global.requestNotificationPermission()">
-                Notificaties ontvangen
+                Meldingen inschakelen
             </x-button>
 
             <x-button type="button" class="bg-black text-primary hover:bg-white hover:!text-black" x-on:click="$store.global.notificationsDrawerOpen = false">

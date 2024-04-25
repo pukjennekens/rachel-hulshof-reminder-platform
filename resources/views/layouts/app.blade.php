@@ -4,7 +4,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -34,6 +34,7 @@
     <body class="font-sans antialiased">
         <div
             class="fixed top-0 left-0 right-0 bg-primary p-4 text-black z-[60]"
+            x-cloak
             x-data
             x-show="$store.global.notification.show"
             x-transition:enter="transition ease-out duration-300"
@@ -103,6 +104,29 @@
             <main class="h-full overflow-y-auto {{ $padding === 'true' ? 'p-6' : '' }}">
                 @yield('content')
             </main>
+
+            <div 
+                class="bg-primary p-4 flex flex-col items-center gap-2 text-center relative"
+                x-data
+                x-cloak
+                x-show="$store.global.notificationsMessage.show"
+            >
+                <x-icon name="brrrrrrr" size="w-[5rem] h-[5rem]"/>
+
+                <h3 class="text-xl font-bold">Meldingen staan uit</h3>
+
+                <p class="max-w-80">
+                    Schakel meldingen in om op de hoogte te blijven van je eetmomenten en andere notificaties.
+                </p>
+
+                <x-button type="button" x-on:click="$store.global.requestNotificationPermission()">
+                    Meldingen inschakelen
+                </x-button>
+
+                <button type="button" class="absolute top-0 right-0 p-2">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
 
             <footer class="w-full bg-white h-24 shadow-top z-40 flex items-center justify-center gap-6 top-shadow pb-6">
                 {{-- Active classes: underline font-bold underline-offset-2 --}}
