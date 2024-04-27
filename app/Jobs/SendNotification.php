@@ -9,6 +9,7 @@ use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Support\Facades\Log;
+use Kreait\Firebase\Messaging\CloudMessage;
 use Kreait\Laravel\Firebase\Facades\Firebase;
 
 class SendNotification implements ShouldQueue
@@ -28,15 +29,15 @@ class SendNotification implements ShouldQueue
     public function handle(): void
     {
         Log::info('Sending notification to ' . $this->notificationPreference->user->email);
-        
-        Firebase::messaging()->send([
-            'message' => [
-                'token'        => $this->notificationPreference->user->fcm_token,
-                'notification' => [
-                    'title' => $this->notificationPreference->notificationType->name,
-                    'body'  => 'Klik om te openen 😀',
-                ],
+
+        $message = CloudMessage::fromArray([
+            'token'        => $this->notificationPreference->user->fcm_token,
+            'notification' => [
+                'title' => $this->notificationPreference->notificationType->name,
+                'body'  => 'Klik om te openen 😀',
             ],
         ]);
+
+        Firebase::messaging()->send($message);
     }
 }
