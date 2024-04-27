@@ -8,6 +8,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
+use Illuminate\Support\Facades\Log;
 use Kreait\Laravel\Firebase\Facades\Firebase;
 
 class SendNotification implements ShouldQueue
@@ -26,6 +27,8 @@ class SendNotification implements ShouldQueue
      */
     public function handle(): void
     {
+        Log::info('Sending notification to ' . $this->notificationPreference->user->email);
+        
         Firebase::messaging()->send([
             'message' => [
                 'token'        => $this->notificationPreference->user->fcm_token,
