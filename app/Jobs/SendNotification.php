@@ -2,24 +2,23 @@
 
 namespace App\Jobs;
 
+use App\Models\UserNotificationPreference;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
-use App\Models\UserNotificationPreference;
-use Illuminate\Support\Facades\Log;
+use Kreait\Laravel\Firebase\Facades\Firebase;
 
 class SendNotification implements ShouldQueue
 {
+    use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
+
     /**
      * Create a new job instance.
      */
     public function __construct(
-        /**
-         * @var UserNotificationPreference
-         */
-        private UserNotificationPreference $notificationPreference
+        public UserNotificationPreference $notificationPreference
     ) {}
 
     /**
@@ -27,6 +26,14 @@ class SendNotification implements ShouldQueue
      */
     public function handle(): void
     {
-        Log::debug('Sending notification to user: ' . $this->notificationPreference->user_id);
+        Firebase::messaging()->send([
+            'message' => [
+                'token'        => $this->notificationPreference->user->fcm_token,
+                'notification' => [
+                    'title' => $this->notificationPreference->notificationType->name,
+                    'body'  => 'Klik om te openen 😀',
+                ],
+            ],
+        ]);
     }
 }

@@ -2,10 +2,8 @@
 
 namespace App\Models;
 
-use App\Jobs\SendNotification;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Log;
-use Illuminate\Support\Facades\Schedule;
 
 class UserNotificationPreference extends Model
 {
@@ -60,10 +58,5 @@ class UserNotificationPreference extends Model
         Log::debug('Scheduling notification for user: ' . $userNotificationPreference->user_id);
         $jobName          = 'SendNotification-' . $userNotificationPreference->id;
         $notificationTime = $userNotificationPreference->notification_time;
-
-        Schedule::job(new SendNotification($userNotificationPreference))
-            ->dailyAt($notificationTime)
-            ->name($jobName)
-            ->onOneServer();
     }
 }
