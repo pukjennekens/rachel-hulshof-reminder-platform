@@ -1,7 +1,6 @@
 <?php
 
-use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\Schedule;
 
-Artisan::command('send:notifications')
-    ->purpose('Send notifications to users')
+Schedule::command('send:notifications')
     ->everyMinute();
