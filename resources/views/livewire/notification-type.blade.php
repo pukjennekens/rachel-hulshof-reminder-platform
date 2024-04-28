@@ -9,21 +9,25 @@
         <label class="input input-bordered flex items-center gap-2">
             Naam
             <input type="text" class="grow" placeholder="Ontbijt" wire:model="name" />
+            <x-input-errors name="name" />
         </label>
 
         <label class="input input-bordered flex items-center gap-2">
             Standaard tijd
             <input type="time" class="grow" wire:model="default_time" />
+            <x-input-errors name="default_time" />
         </label>
 
         <label class="input input-bordered flex items-center gap-2">
             Heading
             <input type="text" class="grow" placeholder="Van Slinc" wire:model="heading" />
+            <x-input-errors name="heading" />
         </label>
 
         <label class="input input-bordered flex items-center gap-2">
             Subheading
             <input type="text" class="grow" placeholder="Lorem ipsum" wire:model="subheading" />
+            <x-input-errors name="subheading" />
         </label>
 
         <div class="flex justify-end">

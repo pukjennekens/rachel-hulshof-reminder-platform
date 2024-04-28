@@ -34,6 +34,8 @@ class NotificationType extends ModalComponent
 
         $this->name         = $this->notificationType->name;
         $this->default_time = $this->notificationType->default_time;
+        $this->heading      = $this->notificationType->heading;
+        $this->subheading   = $this->notificationType->subheading;
     }
 
     public function save()
