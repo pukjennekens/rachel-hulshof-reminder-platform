@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class NotificationType extends Model
 {
-    protected $fillable = ['name', 'default_time'];
+    protected $fillable = ['name', 'default_time', 'heading', 'subheading'];
 
     /**
      * Get the user notification preferences for the notification type.

@@ -20,6 +20,12 @@ class NotificationType extends ModalComponent
     #[Validate('required')]
     public $default_time;
 
+    #[Validate('required|string|max:255')]
+    public $heading;
+
+    #[Validate('required|string|max:255')]
+    public $subheading;
+
     public function mount($notificationTypeId = null)
     {
         $this->notificationType = $notificationTypeId

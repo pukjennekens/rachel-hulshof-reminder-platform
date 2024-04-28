@@ -56,3 +56,15 @@ Route::post('/fcm-token', function() {
 })
     ->name('fcm-token')
     ->middleware('auth');
+
+Route::get('/test', function() {
+    $message = CloudMessage::fromArray([
+        'token' => 'eOGEF77J14UaBO6zcWaH6N:APA91bGv6Jmis2F74Xp2dzoISIBES5Zo5yi_eoPd27qpnzKr-HSIq9hu6KSFKoyOXzAhfiz0xqFZE5Jt-d4eEYO39qSmy5J1QByc0AHYmH6MWKBkvAQ6MCyodDT3pAPQlzRd7Zi4XuYQ',
+        'notification' => [
+            'title' => 'New Notification',
+            'body' => 'This is a notification sent from Kreait\Laravel',
+        ]
+    ]);
+
+    Firebase::messaging()->send($message);
+});

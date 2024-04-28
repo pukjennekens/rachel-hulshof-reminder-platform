@@ -23,9 +23,7 @@ class SendNotifications extends Command
     {
         // Round the current time in set the seconds to 0
         $time = now()->setSeconds(0)->format('H:i:s');
-        Log::debug('Running SendNotifications command at ' . $time);
         $notificationPreferences = UserNotificationPreference::where('notification_time', $time)->get();
-        Log::debug('Found ' . $notificationPreferences->count() . ' notifications to send');
 
         foreach($notificationPreferences as $notificationPreference) {
             dispatch(new SendNotification($notificationPreference));
