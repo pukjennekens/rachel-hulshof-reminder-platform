@@ -42,6 +42,8 @@ class NotificationType extends ModalComponent
 
         $this->notificationType->name         = $this->name;
         $this->notificationType->default_time = $this->default_time;
+        $this->notificationType->heading      = $this->heading;
+        $this->notificationType->subheading   = $this->subheading;
         $this->notificationType->save();
 
         $this->dispatch('notify', type: 'success', message: 'Het nieuwe notificatietype is opgeslagen!');
