@@ -23,5 +23,12 @@
     "start_url": "/",
     "display": "standalone",
     "background_color": "#ffffff",
-    "theme_color": "#efd6db"
+    "theme_color": "#efd6db",
+    "splash_screen": {
+        "assets": {
+            "192x192": "/images/logos/slinc-logo-text-192-192.png",
+            "512x512": "/images/logos/slinc-logo-text-512-512.png"
+        },
+        "background_color": "#4a4a49"
+    }
 }
