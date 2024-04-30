@@ -28,35 +28,4 @@ class UserNotificationPreference extends Model
     {
         return $this->belongsTo(NotificationType::class);
     }
-
-    /**
-     * On create or update, set the schedule for the job to send the notification
-     * 
-     * @return void
-     */
-    protected static function booted(): void
-    {
-        static::created(function (UserNotificationPreference $userNotificationPreference) {
-            Log::debug('User notification preference saved: ' . $userNotificationPreference->id);
-            self::scheduleNotification($userNotificationPreference);
-        });
-
-        static::updated(function (UserNotificationPreference $userNotificationPreference) {
-            Log::debug('User notification preference updated: ' . $userNotificationPreference->id);
-            self::scheduleNotification($userNotificationPreference);
-        });
-    }
-
-    /**
-     * Schedule the notification job
-     * 
-     * @param UserNotificationPreference $userNotificationPreference
-     * @return void
-     */
-    private static function scheduleNotification(UserNotificationPreference $userNotificationPreference): void
-    {
-        Log::debug('Scheduling notification for user: ' . $userNotificationPreference->user_id);
-        $jobName          = 'SendNotification-' . $userNotificationPreference->id;
-        $notificationTime = $userNotificationPreference->notification_time;
-    }
 }

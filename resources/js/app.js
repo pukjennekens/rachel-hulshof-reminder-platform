@@ -39,21 +39,19 @@ const app = initializeApp({
 
 const messaging = getMessaging(app);
 
-function requestPermission() {
+const requestPermission = () => {
     if (window.Notification.permission === "granted") {
         setToken();
     } else {
         Alpine.store("global").notificationsMessage = { show: true };
 
         window.Notification.requestPermission((value) => {
-            if (value == "granted") {
-                setToken();
-            }
+            if (value == "granted") setToken();
         });
     }
-}
+};
 
-async function setToken() {
+const setToken = async () => {
     Alpine.store("global").notificationsMessage = { show: false };
 
     getToken(messaging, {
@@ -62,14 +60,13 @@ async function setToken() {
     })
         .then((currentToken) => {
             if (currentToken) {
-                console.log("Token available: ", currentToken);
-
-                if (localStorage.getItem("token") !== currentToken) {
-                    console.log("Dispatching user-fcm-token-updated event.");
+                console.log("Token: ", currentToken);
+                if (localStorage.getItem("token") !== currentToken)
                     axios.post("/fcm-token", {
                         token: currentToken,
                     });
-                }
+
+                localStorage.setItem("token", currentToken);
             } else {
                 Alpine.store("global").notificationsMessage = { show: true };
             }
@@ -77,7 +74,7 @@ async function setToken() {
         .catch((err) => {
             console.log("An error occurred while retrieving token. ", err);
         });
-}
+};
 
 onMessage(messaging, (payload) => {
     Alpine.store("global").notification = {
