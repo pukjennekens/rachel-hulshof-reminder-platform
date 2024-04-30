@@ -94,7 +94,20 @@
                     </button>
 
                     <div class="w-full h-full overflow-y-auto">
-                        
+                        <ul class="space-y-4">
+                            {{-- underline underline-offset-4 --}}
+                            <li><a href="{{ route('dashboard') }}" class="font-bold {{ request()->routeIs('dashboard') ? 'underline underline-offset-4' : '' }}">Dashboard</a></li>
+                            <li><a href="{{ route('weight') }}" class="font-bold {{ request()->routeIs('weight') ? 'underline underline-offset-4' : '' }}">Mijn gewicht</a></li>
+                            <li><a href="{{ route('water') }}" class="font-bold {{ request()->routeIs('water') ? 'underline underline-offset-4' : '' }}">Aantal glazen water</a></li>
+                            <li><a href="{{ route('notifications') }}" class="font-bold {{ request()->routeIs('notifications') ? 'underline underline-offset-4' : '' }}">Mijn eetmomenten</a></li>
+                            <li><a href="#" class="font-bold">Voedingsprogramma</a></li>
+                            <li><a href="{{ route('faq') }}" class="font-bold {{ request()->routeIs('faq') ? 'underline underline-offset-4' : '' }}">Veelgestelde vragen</a></li>
+                            <li><a href="#" class="font-bold">Mijn Checklist</a></li>
+                            <li><a href="#" class="font-bold">Recepten</a></li>
+                            <li><a href="#" class="font-bold">Blog</a></li>
+                            <li><a href="#" class="font-bold">Slinc Shop</a></li>
+                            <li><a href="#" class="font-bold">Contact</a></li>
+                        </ul>
                     </div>
                 </nav>
             </header>

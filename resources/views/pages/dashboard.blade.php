@@ -21,7 +21,7 @@
         <div class="space-y-4">
             <a href="{{ route('weight') }}" class="bg-[#efd6db] px-8 py-6 rounded-lg flex justify-between items-end gap-4">
                 <div>
-                    <i class="fas fa-clipboard-list text-5xl mb-4"></i>
+                    <x-icon name="weegschaal" size="w-[4rem] h-[4rem]" />
 
                     <h2 class="text-lg font-bold mb-2">Mijn totale gewichtsverandering:</h2>
 
@@ -33,7 +33,7 @@
 
             <a href="{{ route('water') }}" class="bg-[#bbe7e6] px-8 py-6 rounded-lg flex justify-between items-end gap-4">
                 <div>
-                    <i class="fas fa-clipboard-list text-5xl mb-4"></i>
+                    <x-icon name="glas drinken" size="w-[4rem] h-[4rem]" />
 
                     <h2 class="text-lg font-bold mb-2">Aantal glazen water dat ik heb gedronken:</h2>
 
@@ -45,7 +45,7 @@
 
             <a href="{{ route('notifications') }}" class="bg-[#f7f7f7] px-8 py-6 rounded-lg flex justify-between items-end gap-4">
                 <div>
-                    <i class="fas fa-clipboard-list text-5xl mb-4"></i>
+                    <x-icon name="formulier" size="w-[4rem] h-[4rem]" />
 
                     <h2 class="text-lg font-bold mb-2">Aantal eetmomenten dat ik heb afgerond:</h2>
 
