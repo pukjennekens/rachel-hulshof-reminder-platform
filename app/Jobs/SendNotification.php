@@ -38,6 +38,8 @@ class SendNotification implements ShouldQueue
             ],
         ]);
 
+        Log::info('Message: ' . json_encode($message));
+
         Firebase::messaging()->send($message);
     }
 }
