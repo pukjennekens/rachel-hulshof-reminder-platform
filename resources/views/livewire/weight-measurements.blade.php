@@ -14,11 +14,25 @@
                 </table>
             </div>
 
-            <div class="text-center">
+            <div class="text-center" x-data="{ confirm: false }">
                 <p>Wil je opnieuw beginnen? Klik dan op reset.</p>
 
-                <x-button type="button" class="mt-4" wire:click="resetWeightMeasurements" wire:loading.class="loading">
+                <x-button type="button" class="mt-4" x-on:click="confirm = true;" x-cloak x-show="!confirm">
                     Reset
+                </x-button>
+
+                <x-button 
+                    type="button"
+                    class="mt-4"
+                    wire:click="resetWeightMeasurements"
+                    wire:loading.class="loading"
+                    x-cloak
+                    x-show="confirm"
+                    x-on:click="confirm = false;"
+                    x-on:click.away="confirm = false;"
+                    x-on:keydown.escape.window="confirm = false;"
+                >
+                    Zeker?
                 </x-button>
             </div>
         </div>
