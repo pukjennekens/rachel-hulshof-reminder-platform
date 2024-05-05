@@ -18,6 +18,8 @@ class WaterIntake extends Component
     {
         $this->waterIntake++;
         auth()->user()->incrementTodaysWaterIntake();
+
+        if($this->waterIntake === $this->waterIntakeGoal) $this->dispatch('water-intake-goal-completed');
     }
 
     public function decrement()

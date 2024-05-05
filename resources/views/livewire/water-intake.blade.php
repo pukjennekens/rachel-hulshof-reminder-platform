@@ -23,4 +23,5 @@
         </button>
     </div>
 
+    <div class="hidden" x-on:water-intake-goal-completed.window="window.confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } }); console.log('test');"></div>
 </div>
