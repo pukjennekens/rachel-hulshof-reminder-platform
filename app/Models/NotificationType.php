@@ -6,7 +6,19 @@ use Illuminate\Database\Eloquent\Model;
 
 class NotificationType extends Model
 {
-    protected $fillable = ['name', 'default_time', 'heading', 'subheading'];
+    protected $fillable = ['name', 'default_time', 'heading', 'subheading', 'default_on'];
+
+    /**
+     * Get the attributes that should be cast.
+     *
+     * @return array<string, string>
+     */
+    protected function casts(): array
+    {
+        return [
+            'default_on' => 'boolean',
+        ];
+    }
 
     /**
      * Get the user notification preferences for the notification type.

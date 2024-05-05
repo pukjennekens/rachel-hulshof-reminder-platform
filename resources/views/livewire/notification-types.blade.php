@@ -24,6 +24,7 @@
                                     <th></th>
                                     <th>Naam</th>
                                     <th>Standaard tijd</th>
+                                    <th>Standaard</th>
                                     <th></th>
                                 </tr>
                             </thead>
@@ -33,6 +34,7 @@
                                         <th>{{ $loop->iteration }}</th>
                                         <td>{{ $notificationType->name }}</td>
                                         <td>{{ $notificationType->default_time }}</td>
+                                        <td>{{ $notificationType->default_on ? 'Ja' : 'Nee' }}</td>
                                         <th class="text-right flex gap-2 justify-end">
                                             <button class="btn btn-sm btn-warning" wire:click="$dispatch('openModal', {component: 'notification-type', arguments: { notificationTypeId: {{ $notificationType->id }} }})">
                                                 <i class="fas fa-edit"></i>

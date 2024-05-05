@@ -65,11 +65,11 @@
         x-transition:leave-end="transform translate-y-full"
     >
         <div class="flex items-center justify-between gap-4">
-            <x-button type="button" x-on:click="$store.global.requestNotificationPermission()">
+            <x-button type="button" x-on:click="$store.global.requestNotificationPermission()" x-cloak x-show="window.Notification.permission === 'default'">
                 Meldingen inschakelen
             </x-button>
 
-            <x-button type="button" class="bg-black text-primary hover:bg-white hover:!text-black" x-on:click="$store.global.notificationsDrawerOpen = false">
+            <x-button type="button" class="bg-black text-primary hover:bg-white hover:!text-black ml-auto" x-on:click="$store.global.notificationsDrawerOpen = false">
                 Gereed
             </x-button>
         </div>

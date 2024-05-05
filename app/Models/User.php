@@ -204,5 +204,16 @@ class User extends Authenticatable
             $user->notificationPreferences()->delete();
             $user->dailyCheckOffs()->delete();
         });
+
+        static::created(function ($user) {
+            $defaultNotificationTypes = NotificationType::where('default_on', true)->get();
+
+            foreach ($defaultNotificationTypes as $notificationType) {
+                $user->notificationPreferences()->create([
+                    'notification_type_id' => $notificationType->id,
+                    'notification_time'    => $notificationType->default_time,
+                ]);
+            }
+        });
     }
 }

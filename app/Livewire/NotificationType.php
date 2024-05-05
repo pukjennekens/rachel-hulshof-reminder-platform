@@ -26,6 +26,8 @@ class NotificationType extends ModalComponent
     #[Validate('required|string|max:255')]
     public $subheading;
 
+    public $default_on = false;
+
     public function mount($notificationTypeId = null)
     {
         $this->notificationType = $notificationTypeId
@@ -36,6 +38,7 @@ class NotificationType extends ModalComponent
         $this->default_time = $this->notificationType->default_time;
         $this->heading      = $this->notificationType->heading;
         $this->subheading   = $this->notificationType->subheading;
+        $this->default_on   = $this->notificationType->default_on ?? false;
     }
 
     public function save()
@@ -46,9 +49,10 @@ class NotificationType extends ModalComponent
         $this->notificationType->default_time = $this->default_time;
         $this->notificationType->heading      = $this->heading;
         $this->notificationType->subheading   = $this->subheading;
+        $this->notificationType->default_on   = $this->default_on ?? false;
         $this->notificationType->save();
 
-        $this->dispatch('notify', type: 'success', message: 'Het nieuwe notificatietype is opgeslagen!');
+        $this->dispatch('notify', type: 'success', message: 'Opgeslagen!');
         $this->dispatch('closeModal');
         $this->dispatch('notification-type-updated');
     }

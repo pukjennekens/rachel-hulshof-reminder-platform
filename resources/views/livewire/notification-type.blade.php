@@ -30,6 +30,13 @@
             <x-input-errors name="subheading" />
         </label>
 
+        <label class="label cursor-pointer">
+            <span class="label-text">Standaard aan?</span>
+            <input type="checkbox" class="toggle toggle-primary" wire:model="default_on" />
+            <x-input-errors name="default_on" />
+        </label>
+
+
         <div class="flex justify-end">
             <button class="btn btn-neutral">Opslaan</button>
         </div>
