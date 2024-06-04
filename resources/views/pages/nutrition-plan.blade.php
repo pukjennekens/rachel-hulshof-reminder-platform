@@ -20,31 +20,6 @@
             De voedingsmiddelen zijn verdeeld in 'categorie A en B'. Wil je een zo goed mogelijk resultaat behalen, kies dan zoveel mogelijk voor producten uit categorie A. Wil je eens een keer afwisselen kies dan voor categorie B. Groenten en fruit zijn hierin een uitzondering. Variatie in Categorie A en B van groenten en fruit is juist een betere keuze dan eenzijdige keuzes uit Categorie A.
         </p>
 
-        <ul class="faq-list">
-            <li>
-                <div class="flex items-center gap-2">
-                    <i class="fa-solid fa-chevron-down"></i>
-                    <p class="font-bold">Test vraag</p>
-                </div>
-
-                <div>
-                    <p>
-                        Test antwoord
-                    </p>
-                </div>
-            </li>
-
-            <li class="flex items-start gap-2">
-                <div>
-                    <i class="fa-solid fa-chevron-down"></i>
-                </div>
-            </li>
-
-            <li class="flex items-start gap-2">
-                <div>
-                    <i class="fa-solid fa-chevron-down"></i>
-                </div>
-            </li>
-        </ul>
+        @livewire('nutrition-plans')
     </div>
 @endsection

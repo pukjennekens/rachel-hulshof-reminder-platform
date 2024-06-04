@@ -103,7 +103,7 @@
                             <li><a href="#" class="font-bold">Recepten</a></li>
                             <li><a href="#" class="font-bold">Blog</a></li>
                             <li><a href="#" class="font-bold">Slinc Shop</a></li>
-                            <li><a href="#" class="font-bold">Contact</a></li>
+                            <li><a href="{{ route('help') }}" class="font-bold">Contact</a></li>
                         </ul>
                     </div>
                 </nav>
