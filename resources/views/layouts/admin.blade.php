@@ -6,10 +6,10 @@
     <title>{{ config('app.name') }}</title>
 
     <!-- Font Awesome -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"></script>
 
     <!-- Scripts -->
-    @vite(['resources/js/admin.js', 'resources/css/admin.scss'])
+    @vite(['resources/js/admin.js', 'resources/css/admin.scss', 'resources/css/global.scss'])
 
     @livewireStyles
 </head>
@@ -67,6 +67,8 @@
             </div>
         </template>
     </div>
+
+    @include('layouts.global.fonts')
 
     @livewireScripts
     @livewire('wire-elements-modal')

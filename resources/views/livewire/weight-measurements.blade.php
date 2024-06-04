@@ -1,7 +1,7 @@
 <div>
     @if(!$weightMeasurements->isEmpty())
         <div class="bg-primary p-6 flex flex-col min-h-1/2">
-            <h2 class="text-2xl font-bold mb-2">Gewicht logboek</h2>
+            <h2 class="text-3xl mb-2">Gewicht logboek</h2>
 
             <div class="h-full overflow-y-auto mb-4">
                 <table class="w-full">
@@ -15,7 +15,7 @@
             </div>
 
             <div class="text-center" x-data="{ confirm: false }">
-                <p>Wil je opnieuw beginnen? Klik dan op reset.</p>
+                <p class="font-bold">Wil je opnieuw beginnen? Klik dan op reset.</p>
 
                 <x-button type="button" class="mt-4" x-on:click="confirm = true;" x-cloak x-show="!confirm">
                     Reset

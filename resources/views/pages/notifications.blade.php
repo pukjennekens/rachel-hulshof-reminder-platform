@@ -3,9 +3,9 @@
 @section('header')
     <div class="px-6 py-4 flex items-center justify-between gap-4 border-b border-black">
         <div>
-            <h1 class="text-2xl font-bold mb-2">Mijn eetmomenten</h1>
+            <h1 class="text-3xl mb-2">Mijn eetmomenten</h1>
 
-            <p>
+            <p class="font-bold">
                 Houd je eetmomenten bij door ze af te vinken.
             </p>
         </div>
@@ -26,9 +26,9 @@
                 <x-icon name="wekker v2" />
             </button>
 
-            <button class="font-bold inline-flex items-center rounded-full border border-black hover:bg-black hover:text-white transition icon-button">
+            <a href="{{ route('apple-day') }}" class="font-bold inline-flex items-center rounded-full border border-black hover:bg-black hover:text-white transition icon-button">
                 <x-icon name="appel" />
-            </button>
+            </a>
         </div>
 
         <p>

@@ -3,7 +3,7 @@
 @section('header')
     <div class="px-6 py-4 flex items-center justify-between gap-4 border-b border-black">
         <div>
-            <h1 class="text-2xl font-bold mb-2">Contact</h1>
+            <h1 class="text-3xl mb-2">Contact</h1>
 
             <p>
                 Heb je een vraag?
@@ -23,12 +23,12 @@
                 <div>
                     <x-icon name="telefoon" size="w-16 h-16" />
 
-                    <h2 class="text-lg font-bold my-2">Mijn Slinc coach</h2>
+                    <h2 class="text-lg my-2">Mijn Slinc coach</h2>
 
                     <p>Heb je vragen? Neem contact op met je Slinc coach. We helpen je graag verder.</p>
                 </div>
 
-                <i class="fa-solid fa-arrow-up-right-from-square text-2xl"></i>
+                <i class="fa-solid fa-arrow-up-right-from-square text-3xl"></i>
             </a>
         </div>
     </div>

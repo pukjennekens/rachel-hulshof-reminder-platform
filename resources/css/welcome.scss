@@ -1,0 +1,61 @@
+html,
+body {
+    @apply h-full;
+}
+
+body {
+    @screen md {
+        @apply flex justify-center items-center bg-gray-100;
+    }
+}
+
+.app-container {
+    @apply h-full bg-primary relative;
+
+    &::after {
+        content: "";
+        background-image: url("../patterns/gray-hearts.svg");
+        @apply w-full h-full bg-cover bg-bottom opacity-15 absolute top-0 right-0 bottom-0 left-0 pointer-events-none z-0;
+    }
+
+    &::before {
+        content: "";
+        @apply w-full h-full absolute top-0 right-0 bottom-0 left-0 pointer-events-none z-10;
+        background: radial-gradient(
+            circle at top left,
+            #efd6db,
+            transparent 120%
+        );
+    }
+
+    .app-container-content {
+        @apply z-20 p-6 h-full;
+    }
+
+    @screen md {
+        @apply max-w-xl mx-auto border h-[90vh] min-h-[600px] w-full;
+    }
+}
+
+.continue-button.disabled {
+    @apply pointer-events-none relative overflow-hidden;
+
+    & > * {
+        @apply z-10;
+    }
+
+    &::after {
+        content: "";
+        @apply absolute w-full h-full top-0 left-0 bg-gray-400 z-0;
+        animation: button-loading 8s linear;
+    }
+}
+
+@keyframes button-loading {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}

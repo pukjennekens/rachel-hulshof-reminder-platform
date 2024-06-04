@@ -3,16 +3,14 @@
 @extends('layouts.app')
 
 @section('header')
-    <div class="px-6 py-4 flex items-center justify-between gap-4 border-b border-black">
+    <div class="px-6 pt-4 flex items-center justify-between gap-4">
         <div>
-            <h1 class="text-2xl font-bold mb-2">Welkom</h1>
+            <h1 class="text-3xl mb-2">Welkom</h1>
 
-            <p>
+            <p class="font-bold">
                 Hoe gaat het vandaag?
             </p>
         </div>
-
-        <x-icon name="appel" size="w-[3.5rem] h-[3.5rem]" />
     </div>
 @endsection
 
@@ -23,7 +21,7 @@
                 <div>
                     <x-icon name="weegschaal" size="w-[4rem] h-[4rem]" />
 
-                    <h2 class="text-lg font-bold mb-2">Mijn totale gewichtsverandering:</h2>
+                    <p class="text-lg font-bold mb-2">Mijn totale gewichtsverandering:</p>
 
                     <span class="text-4xl font-bold">{{ auth()->user()->weightChange ? auth()->user()->weightChange > 0 ? '+' . auth()->user()->weightChange : auth()->user()->weightChange : '0' }} kg</span>
                 </div>
@@ -35,7 +33,7 @@
                 <div>
                     <x-icon name="glas drinken" size="w-[4rem] h-[4rem]" />
 
-                    <h2 class="text-lg font-bold mb-2">Aantal glazen water dat ik heb gedronken:</h2>
+                    <p class="text-lg font-bold mb-2">Aantal glazen water dat ik heb gedronken:</p>
 
                     <span class="text-4xl font-bold">{{ auth()->user()->todaysWaterIntake }} / {{ $waterIntakeGoal }}</span>
                 </div>
@@ -47,7 +45,7 @@
                 <div>
                     <x-icon name="formulier" size="w-[4rem] h-[4rem]" />
 
-                    <h2 class="text-lg font-bold mb-2">Aantal eetmomenten dat ik heb afgerond:</h2>
+                    <p class="text-lg font-bold mb-2">Aantal eetmomenten dat ik heb afgerond:</p>
 
                     <span class="text-4xl font-bold">{{ auth()->user()->checkedOffNotificationsCount }} / {{ auth()->user()->enabledNotificationsCount }}</span>
                 </div>

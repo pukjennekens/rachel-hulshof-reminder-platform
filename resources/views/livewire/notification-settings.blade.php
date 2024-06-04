@@ -1,5 +1,5 @@
 <div>
-    <h3 class="text-2xl font-bold mb-2 mt-4">
+    <h3 class="text-3xl mb-2 mt-4">
         Herinneringen
     </h3>
 

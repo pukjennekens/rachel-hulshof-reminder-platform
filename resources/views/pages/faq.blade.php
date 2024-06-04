@@ -3,9 +3,9 @@
 @section('header')
     <div class="px-6 py-4 flex items-center justify-between gap-4 border-b border-black">
         <div>
-            <h1 class="text-2xl font-bold mb-2">Veelgestelde vragen</h1>
+            <h1 class="text-3xl mb-2">Veelgestelde vragen</h1>
 
-            <p>
+            <p class="font-bold">
                 Meestgestelde vragen
             </p>
         </div>

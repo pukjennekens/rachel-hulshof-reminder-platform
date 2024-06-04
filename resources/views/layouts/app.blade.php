@@ -12,15 +12,11 @@
 
         <title>{{ config('app.name', 'Laravel') }}</title>
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-
         <!-- Font Awesome -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
         <!-- Scripts -->
-        @vite(['resources/js/app.js', 'resources/css/app.scss'])
+        @vite(['resources/js/app.js', 'resources/css/app.scss', 'resources/css/global.scss'])
 
         <script src="https://js.pusher.com/beams/1.0/push-notifications-cdn.js"></script>
 
@@ -78,7 +74,7 @@
                     x-transition:leave-end="opacity-0"
                 ></div>
                 <nav
-                    class="fixed top-0 left-0 bottom-0 w-96 max-w-full h-full bg-white shadow-lg z-50 px-8 py-16"
+                    class="fixed top-0 left-0 bottom-0 w-96 max-w-full h-full bg-white shadow-lg z-50 px-8 py-16 flex flex-col justify-center"
                     x-cloak
                     x-show="open"
                     x-on:click.away="open = false"
@@ -90,18 +86,18 @@
                     x-transition:leave-start="transform translate-x-0"
                     x-transition:leave-end="transform -translate-x-full"
                 >
-                    <button type="button" class="text-2xl absolute top-5 right-8" x-on:click="open = false">
+                    <button type="button" class="text-3xl absolute top-5 right-8" x-on:click="open = false">
                         <i class="fas fa-times"></i>
                     </button>
 
-                    <div class="w-full h-full overflow-y-auto">
+                    <div class="w-full overflow-y-auto">
                         <ul class="space-y-4">
                             {{-- underline underline-offset-4 --}}
                             <li><a href="{{ route('dashboard') }}" class="font-bold {{ request()->routeIs('dashboard') ? 'underline underline-offset-4' : '' }}">Dashboard</a></li>
                             <li><a href="{{ route('weight') }}" class="font-bold {{ request()->routeIs('weight') ? 'underline underline-offset-4' : '' }}">Mijn gewicht</a></li>
                             <li><a href="{{ route('water') }}" class="font-bold {{ request()->routeIs('water') ? 'underline underline-offset-4' : '' }}">Aantal glazen water</a></li>
                             <li><a href="{{ route('notifications') }}" class="font-bold {{ request()->routeIs('notifications') ? 'underline underline-offset-4' : '' }}">Mijn eetmomenten</a></li>
-                            <li><a href="#" class="font-bold">Voedingsprogramma</a></li>
+                            <li><a href="{{ route('nutrition-plan') }}" class="font-bold">Voedingsprogramma</a></li>
                             <li><a href="{{ route('faq') }}" class="font-bold {{ request()->routeIs('faq') ? 'underline underline-offset-4' : '' }}">Veelgestelde vragen</a></li>
                             <li><a href="#" class="font-bold">Mijn Checklist</a></li>
                             <li><a href="#" class="font-bold">Recepten</a></li>
@@ -127,7 +123,7 @@
             >
                 <x-icon name="brrrrrrr" size="w-[5rem] h-[5rem]"/>
 
-                <h3 class="text-xl font-bold">Meldingen staan uit</h3>
+                <h3 class="text-xl">Meldingen staan uit</h3>
 
                 <p class="max-w-80">
                     Schakel meldingen in om op de hoogte te blijven van je eetmomenten en andere notificaties.
@@ -204,6 +200,8 @@
                 </template>
             </div>
         </div>
+
+        @include('layouts.global.fonts')
 
         @livewireScriptConfig
     </body>

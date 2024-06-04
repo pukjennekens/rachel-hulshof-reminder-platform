@@ -10,13 +10,13 @@ export default {
     ],
     theme: {
         extend: {
-            fontFamily: {
-                sans: ["Figtree", ...defaultTheme.fontFamily.sans],
-            },
-
             colors: {
                 primary: "#efd6db",
             },
+        },
+        fontFamily: {
+            figtree: ["Figtree", ...defaultTheme.fontFamily.sans],
+            amiri: ["Amiri", ...defaultTheme.fontFamily.serif],
         },
     },
     plugins: [require("daisyui")],

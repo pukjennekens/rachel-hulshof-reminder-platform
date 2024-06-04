@@ -1,12 +1,14 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Kreait\Firebase\Messaging\CloudMessage;
-use Kreait\Laravel\Firebase\Facades\Firebase;
 
 Route::view('/login', 'pages.auth.login')
     ->name('login')
-    ->middleware('guest');
+    ->middleware(['guest', 'check-welcome-page']);
+
+Route::view('/register', 'pages.auth.register')
+    ->name('register')
+    ->middleware(['guest', 'check-welcome-page']);
 
 Route::get('/logout', function () {
         auth()->logout();
@@ -14,10 +16,6 @@ Route::get('/logout', function () {
     })
     ->name('logout')
     ->middleware('auth');
-
-Route::view('/register', 'pages.auth.register')
-    ->name('register')
-    ->middleware('guest');
 
 Route::view('/', 'pages.dashboard')
     ->name('dashboard')
@@ -42,10 +40,21 @@ Route::view('/help', 'pages.help')
 Route::view('/faq', 'pages.faq')
     ->name('faq')
     ->middleware('auth');
+
+Route::view('/apple-day', 'pages.apple-day')
+    ->name('apple-day')
+    ->middleware('auth');
+
+Route::view('/nutrition-plan', 'pages.nutrition-plan')
+    ->name('nutrition-plan')
+    ->middleware('auth');
     
 Route::view('/admin', 'pages.admin.dashboard')
     ->name('admin.dashboard')
     ->middleware('auth', 'is-admin');
+
+Route::view('/welcome', 'pages.welcome')
+    ->name('welcome');
 
 Route::post('/fcm-token', function() {
     if(!auth()->user()) {
