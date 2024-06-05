@@ -1,5 +1,5 @@
 <x-faq-list>
-    @if(!$nutritionPlans->isEmpty())
+    @if($nutritionPlans->isEmpty())
         <p class="bg-[#f7f7f7] p-4 rounded-md">Er zijn geen voedingsschema's gevonden.</p>
     @else
         @foreach($nutritionPlans as $nutritionPlan)

@@ -10,3 +10,12 @@ h6 {
 p {
     @apply font-figtree;
 }
+
+p a,
+li.content-li a {
+    @apply text-[#c33c69] underline underline-offset-2;
+}
+
+ul {
+    @apply list-disc list-inside;
+}

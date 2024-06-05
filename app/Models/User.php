@@ -67,8 +67,13 @@ class User extends Authenticatable
      */
     public function getWeightChangeAttribute(): ?float
     {
-        $firstWeightMeasurement = $this->weightMeasurements->sortBy('date')->first();
-        $lastWeightMeasurement  = $this->weightMeasurements->sortByDesc('date')->first();
+        $firstWeightMeasurement = $this->weightMeasurements->sortBy(function($item) {
+            return [$item->date, $item->created_at];
+        })->first();
+        
+        $lastWeightMeasurement = $this->weightMeasurements->sortByDesc(function($item) {
+            return [$item->date, $item->created_at];
+        })->first();
 
         if ($firstWeightMeasurement && $lastWeightMeasurement)
             return $lastWeightMeasurement->weight - $firstWeightMeasurement->weight;

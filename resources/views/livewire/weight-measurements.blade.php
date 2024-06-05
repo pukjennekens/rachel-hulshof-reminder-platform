@@ -8,7 +8,20 @@
                     @foreach( $weightMeasurements->sortBy('date') as $weightMeasurement )
                         <tr class="border-b-2 border-b-black">
                             <th class="pb-2 pt-2 text-left">{{ $weightMeasurement->date->format('d-m-Y') }}</th>
-                            <td class="pb-2 pt-2 text-right">{{ $weightMeasurement->weight }} kg</td>
+
+                            <td class="pb-2 pt-2 text-right">
+                                {{ number_format( $weightMeasurement->weight, 1, ',', '.' ) }} kg
+                            </td>
+
+                            <td class="text-right w-[1%] pl-4">
+                                <x-button 
+                                    type="button"
+                                    class="!px-2"
+                                    wire:click="$dispatch('openModal', {component: 'edit-weight-measurement', arguments: {weightMeasurementId: {{ $weightMeasurement->id }}}})"
+                                >
+                                    <i class="fas fa-pen"></i>
+                                </x-button>
+                            </td>
                         </tr>
                     @endforeach
                 </table>

@@ -23,7 +23,9 @@
 
                     <p class="text-lg font-bold mb-2">Mijn totale gewichtsverandering:</p>
 
-                    <span class="text-4xl font-bold">{{ auth()->user()->weightChange ? auth()->user()->weightChange > 0 ? '+' . auth()->user()->weightChange : auth()->user()->weightChange : '0' }} kg</span>
+                    <span class="text-4xl font-bold">
+                        {{ auth()->user()->weightChange ? auth()->user()->weightChange > 0 ? '+' . number_format(auth()->user()->weightChange, 1, ',', '.' ) : number_format(auth()->user()->weightChange, 1, ',', '.' ) : '0' }} kg
+                    </span>
                 </div>
 
                 <i class="fas fa-chevron-right text-5xl"></i>

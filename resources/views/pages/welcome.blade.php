@@ -38,22 +38,10 @@
 
                 <main class="flex flex-col h-full justify-between gap-8">
                     <div class="space-y-4">
-                        <h1 class="text-4xl">Welkom</h1>
+                        <h1 class="text-4xl">Installeer de app</h1>
 
                         <p>
-                            Leuk dat je app van Slinc hebt gedownload.
-                        </p>
-
-                        <p>
-                            Nonsequi derit volupta veribea quaecestrum labo et,
-                            sendio ipiendigenem remquiae none ommolo culpa
-                            vendicium.
-                        </p>
-
-                        <p>
-                            Nonsequi derit volupta veribea quaecestrum
-                            laborenimil et, sendio ipiendigenem remquiae none
-                            ommolo culpa slinc.nl.
+                            Je bent slechts 2 stappen verwijderd van de Slinc app op jouw telefoon. Bekijk hier de instructie om de app te gebruiken.
                         </p>
                     </div>
 

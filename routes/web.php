@@ -37,6 +37,10 @@ Route::view('/help', 'pages.help')
     ->name('help')
     ->middleware('auth');
 
+Route::view('/contact', 'pages.contact')
+    ->name('contact')
+    ->middleware('auth');
+
 Route::view('/faq', 'pages.faq')
     ->name('faq')
     ->middleware('auth');

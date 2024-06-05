@@ -2,7 +2,6 @@
 
 namespace App\Livewire;
 
-use Illuminate\Support\Facades\Log;
 use Livewire\Attributes\Validate;
 use Livewire\Component;
 
@@ -10,6 +9,9 @@ class CreateWeightMeasurement extends Component
 {
     #[Validate('required|numeric|regex:/^\d+(\.\d{1})?$/')]
     public $weight = 70;
+
+    #[Validate('required|numeric|regex:/^\d+(\.\d{1})?$/')]
+    public $weightDecimal = 0;
 
     #[Validate('required|date|before_or_equal:today')]
     public $date;
@@ -19,12 +21,9 @@ class CreateWeightMeasurement extends Component
         $this->validate();
 
         auth()->user()->weightMeasurements()->create([
-            'weight' => $this->weight,
+            'weight' => $this->weight + $this->weightDecimal / 10,
             'date'   => $this->date,
         ]);
-
-        $this->weight = 60;
-        $this->date   = '';
 
         $this->dispatch('weight-measurement-created');
     }

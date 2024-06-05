@@ -95,15 +95,14 @@
                             {{-- underline underline-offset-4 --}}
                             <li><a href="{{ route('dashboard') }}" class="font-bold {{ request()->routeIs('dashboard') ? 'underline underline-offset-4' : '' }}">Dashboard</a></li>
                             <li><a href="{{ route('weight') }}" class="font-bold {{ request()->routeIs('weight') ? 'underline underline-offset-4' : '' }}">Mijn gewicht</a></li>
-                            <li><a href="{{ route('water') }}" class="font-bold {{ request()->routeIs('water') ? 'underline underline-offset-4' : '' }}">Aantal glazen water</a></li>
                             <li><a href="{{ route('notifications') }}" class="font-bold {{ request()->routeIs('notifications') ? 'underline underline-offset-4' : '' }}">Mijn eetmomenten</a></li>
-                            <li><a href="{{ route('nutrition-plan') }}" class="font-bold">Voedingsprogramma</a></li>
+                            <li><a href="{{ route('water') }}" class="font-bold {{ request()->routeIs('water') ? 'underline underline-offset-4' : '' }}">Water</a></li>
+                            <li><a href="{{ route('nutrition-plan') }}" class="font-bold {{ request()->routeIs('nutrition-plan') ? 'underline underline-offset-4' : '' }}">Boodschappenlijstje</a></li>
+                            <li><a href="{{ route('apple-day') }}" class="font-bold {{ request()->routeIs('apple-day') ? 'underline underline-offset-4' : '' }}">Appeldag</a></li>
                             <li><a href="{{ route('faq') }}" class="font-bold {{ request()->routeIs('faq') ? 'underline underline-offset-4' : '' }}">Veelgestelde vragen</a></li>
-                            <li><a href="#" class="font-bold">Mijn Checklist</a></li>
-                            <li><a href="#" class="font-bold">Recepten</a></li>
-                            <li><a href="#" class="font-bold">Blog</a></li>
-                            <li><a href="#" class="font-bold">Slinc Shop</a></li>
-                            <li><a href="{{ route('help') }}" class="font-bold">Contact</a></li>
+                            <li><a href="https://rachelhulshof.nl/slinc-webshop/" target="_blank" class="font-bold">Webshop</a></li>
+                            <li><a href="https://rachelhulshof.nl/recepten/" target="_blank" class="font-bold">Recepten</a></li>
+                            <li><a href="{{ route('contact') }}" class="font-bold {{ request()->routeIs('contact') ? 'underline underline-offset-4' : '' }}">Contact</a></li>
                         </ul>
                     </div>
                 </nav>
@@ -203,6 +202,7 @@
 
         @include('layouts.global.fonts')
 
+        @livewire('wire-elements-modal')
         @livewireScriptConfig
     </body>
 </html>

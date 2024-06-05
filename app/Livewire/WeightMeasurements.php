@@ -13,6 +13,11 @@ class WeightMeasurements extends Component
      */
     public $weightMeasurements;
 
+    /**
+     * @var array $editing
+     */
+    public $editing = [];
+
     public function mount()
     {
         $this->weightMeasurements = auth()->user()->weightMeasurements;
@@ -26,9 +31,20 @@ class WeightMeasurements extends Component
     }
 
     #[On('weight-measurement-created')]
+    #[On('weight-measurement-updated')]
+    #[On('weight-measurement-deleted')]
     public function onWeightMeasurementCreated()
     {
         $this->weightMeasurements = auth()->user()->weightMeasurements;
+    }
+
+    public function toggleEdit($id)
+    {
+        if (isset($this->editing[$id])) {
+            unset($this->editing[$id]);
+        } else {
+            $this->editing[$id] = true;
+        }
     }
 
     public function render()

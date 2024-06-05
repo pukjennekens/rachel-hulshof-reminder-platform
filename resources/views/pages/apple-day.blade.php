@@ -64,8 +64,19 @@
             Bovenstaande appeldag is zowel geschikt voor een vrouw als een man
         </p>
 
-        <p class="font-bold">
-            Waar moet je je aan houden?
-        </p>
+        <div>
+            <p class="font-bold">
+                Waar moet je je aan houden?
+            </p>
+            
+            <ul class="list-disc pl-4">
+                <li>Je mag kiezen uit Granny Smith, Golden Delicious of Junami. Deze laatste is een seizoensappel en is niet altijd verkrijgbaar. Kies voor een van deze appels of maak een mix</li>
+                <li>Sla geen eetmoment over en vergeet niet de voedingssupplementen in te nemen</li>
+                <li>Om het proces te versterken, is het raadzaam om op deze dag naast water en kruidenthee geen andere dranken (zoals koffie) te nuttigen</li>
+                <li>Indien je je slap voelt, neem dan een opkikkertje van Maggi</li>
+                <li>Drink 1,5 tot 2 liter water</li>
+                <li>Bak of grill vlees / vis in olijfolie (één theelepel)</li>
+            </ul>
+        </div>
     </div>
 @endsection

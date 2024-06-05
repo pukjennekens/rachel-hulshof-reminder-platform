@@ -65,11 +65,16 @@ body {
 }
 
 .faq-list {
-    li {
-        @apply py-3 cursor-pointer;
+    & > li {
+        @apply py-3;
+
+        & > i,
+        & > p {
+            @apply cursor-pointer;
+        }
     }
 
-    li:not(:last-child) {
+    & > li:not(:last-child) {
         @apply border-b border-black;
     }
 }
