@@ -37,12 +37,16 @@
                 </header>
 
                 <main class="flex flex-col h-full justify-between gap-8">
-                    <div class="space-y-4">
-                        <h1 class="text-4xl">Installeer de app</h1>
+                    <div class="h-full flex items-center">
+                        <div class="space-y-4">
+                            <h1 class="text-4xl">Installeer de app</h1>
 
-                        <p>
-                            Je bent slechts 2 stappen verwijderd van de Slinc app op jouw telefoon. Bekijk hier de instructie om de app te gebruiken.
-                        </p>
+                            <p>
+                                Je bent slechts 2 stappen verwijderd van de Slinc app op jouw telefoon. Bekijk hier de instructie om de app te gebruiken.
+                            </p>
+
+                            <x-button-link href="https://rachelhulshof.nl/webapp-instructie" target="_blank">Hoe installeer ik de app?</x-button-link>
+                        </div>
                     </div>
 
                     <a 

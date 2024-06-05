@@ -3,10 +3,10 @@
 @section('header')
     <div class="px-6 py-4 flex items-center justify-between gap-4 border-b border-black">
         <div>
-            <h1 class="text-3xl mb-2">Mijn eetmomenten</h1>
+            <h1 class="text-3xl mb-2">Ontvang een herinnering</h1>
 
             <p class="font-bold">
-                Houd je eetmomenten bij door ze af te vinken.
+                Wil je op tijd een herinnering? Stel het hier in.
             </p>
         </div>
 
@@ -32,7 +32,7 @@
         </div>
 
         <p>
-            Wil je op tijd een herinnering? Stel het hier in. Is het appeldag? Klik op het appeltje.
+            Houd je eetmomenten bij door ze af te vinken. Is het appeldag? Klik op het appeltje.
         </p>
 
         @livewire('notifications-panel')

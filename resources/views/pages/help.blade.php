@@ -5,7 +5,7 @@
         <div>
             <h1 class="text-3xl mb-2">Help!</h1>
 
-            <p>
+            <p class="font-bold">
                 Afvallen lukt niet (meer)
             </p>
         </div>
