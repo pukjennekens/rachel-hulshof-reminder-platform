@@ -13,13 +13,19 @@ firebase.initializeApp({
     appId: "1:324732111099:web:6ae241d6dbe33aae16485e",
 });
 
-const messasing = firebase.messaging();
+const messaging = firebase.messaging();
 
-messasing.onBackgroundMessage((payload) => {
+messaging.setBackgroundMessageHandler((payload) => {
     console.log(
         "[firebase-messaging-sw.js] Received background message ",
         payload
     );
 
-    self.registration.showNotification();
+    const notificationTitle = payload.notification.title;
+    const notificationOptions = {
+        body: payload.notification.body,
+        icon: payload.notification.icon,
+    };
+
+    self.registration.showNotification(notificationTitle, notificationOptions);
 });
