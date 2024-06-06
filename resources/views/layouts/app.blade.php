@@ -91,7 +91,7 @@
                     </button>
 
                     <div class="w-full overflow-y-auto">
-                        <ul class="space-y-4">
+                        <ul class="space-y-4 pl-0 list-none">
                             {{-- underline underline-offset-4 --}}
                             <li><a href="{{ route('dashboard') }}" class="font-bold {{ request()->routeIs('dashboard') ? 'underline underline-offset-4' : '' }}">Dashboard</a></li>
                             <li><a href="{{ route('weight') }}" class="font-bold {{ request()->routeIs('weight') ? 'underline underline-offset-4' : '' }}">Mijn gewicht</a></li>

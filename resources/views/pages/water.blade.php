@@ -15,13 +15,17 @@
 @endsection
 
 @section('content')
-    <div class="space-y-4">
-        <p>Druk op de waterdruppel als je een glas water hebt gedronken. Eén keer teveel geklikt, klik dan op de pijl om het aan te passen.</p>
+    <div class="flex flex-col gap-6 justify-between min-h-full">
+        <div class="space-y-4">
+            <p>Druk op de waterdruppel als je een glas water hebt gedronken. Eén keer teveel geklikt, klik dan op de pijl om het aan te passen.</p>
 
-        <p class="font-bold">
-            Aantal glazen gedronken:
-        </p>
+            <p class="font-bold">
+                Aantal glazen gedronken:
+            </p>
 
-        @livewire('water-intake')
+            @livewire('water-intake')
+        </div>
+
+        {{-- @livewire('water-history') --}}
     </div>
 @endsection

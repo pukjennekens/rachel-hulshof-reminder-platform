@@ -7,10 +7,10 @@ use LivewireUI\Modal\ModalComponent;
 
 class EditWeightMeasurement extends ModalComponent
 {
-    #[Validate('required|numeric|regex:/^\d+(\.\d{1})?$/')]
+    #[Validate('required|numeric|min:30|max:160')]
     public $weight = 70;
 
-    #[Validate('required|numeric|regex:/^\d+(\.\d{1})?$/')]
+    #[Validate('required|numeric|min:0|max:9')]
     public $weightDecimal = 0;
 
     #[Validate('required|date|before_or_equal:today')]
@@ -26,7 +26,7 @@ class EditWeightMeasurement extends ModalComponent
         $this->weightMeasurement = auth()->user()->weightMeasurements()->findOrFail($weightMeasurementId);
 
         $this->weight            = floor($this->weightMeasurement->weight);
-        $this->weightDecimal     = ($this->weightMeasurement->weight - $this->weight) * 10;
+        $this->weightDecimal     = $this->weightMeasurement->weight * 10 % 10;
         $this->date              = $this->weightMeasurement->date->format('Y-m-d');
     }
 

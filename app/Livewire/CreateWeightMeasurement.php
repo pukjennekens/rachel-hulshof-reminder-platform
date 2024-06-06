@@ -25,6 +25,10 @@ class CreateWeightMeasurement extends Component
             'date'   => $this->date,
         ]);
 
+        $this->weight = 70;
+        $this->weightDecimal = 0;
+        $this->date = null;
+
         $this->dispatch('weight-measurement-created');
     }
 

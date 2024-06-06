@@ -18,7 +18,7 @@
     <div class="space-y-4">
         <div>
             <p class="font-bold">Ontbijt*</p>
-            <ul class="list-disc pl-4">
+            <ul>
                 <li>1,5 appel</li>
                 <li>1 glas water om de Slinc Fit in te nemen</li>
             </ul>
@@ -26,14 +26,14 @@
 
         <div>
             <p class="font-bold">Tussendoortje*</p>
-            <ul class="list-disc pl-4">
+            <ul>
                 <li>1 appel</li>
             </ul>
         </div>
 
         <div>
             <p class="font-bold">Lunch*</p>
-            <ul class="list-disc pl-4">
+            <ul>
                 <li>1,5 appel</li>
                 <li>1 glas water om de Slinc Fit in te nemen</li>
             </ul>
@@ -41,7 +41,7 @@
 
         <div>
             <p class="font-bold">Tussendoortje</p>
-            <ul class="list-disc pl-4">
+            <ul>
                 <li>1 appel</li>
                 <li>neem als je hier behoefte aan hebt een opkikkertje van Maggi</li>
             </ul>
@@ -49,7 +49,7 @@
 
         <div>
             <p class="font-bold">Avondeten*</p>
-            <ul class="list-disc pl-4">
+            <ul>
                 <li>100 tot 125 gram vlees of vis</li>
                 <li>onbeperkt groente (minimaal 200 gr)</li>
                 <li>1 glas water om de Slinc Fit in te nemen</li>
@@ -69,7 +69,7 @@
                 Waar moet je je aan houden?
             </p>
             
-            <ul class="list-disc pl-4">
+            <ul>
                 <li>Je mag kiezen uit Granny Smith, Golden Delicious of Junami. Deze laatste is een seizoensappel en is niet altijd verkrijgbaar. Kies voor een van deze appels of maak een mix</li>
                 <li>Sla geen eetmoment over en vergeet niet de voedingssupplementen in te nemen</li>
                 <li>Om het proces te versterken, is het raadzaam om op deze dag naast water en kruidenthee geen andere dranken (zoals koffie) te nuttigen</li>

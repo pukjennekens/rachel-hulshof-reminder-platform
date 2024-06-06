@@ -37,7 +37,7 @@
                 <x-button 
                     type="button"
                     class="mt-4"
-                    wire:click="resetWeightMeasurements"
+                    wire:click="$dispatch('openModal', {component: 'reset-weight-measurements'})"
                     wire:loading.class="loading"
                     x-cloak
                     x-show="confirm"

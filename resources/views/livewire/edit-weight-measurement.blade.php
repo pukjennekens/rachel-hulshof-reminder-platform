@@ -1,5 +1,5 @@
 <form class="space-y-4 p-6 min-h-1/2" wire:submit.prevent="save">
-    <h2 class="text-3xl mb-4">Meting bewerken</h2>
+    <h2 class="text-3xl">Meting bewerken</h2>
 
     <x-input-group>
         <x-input-label label="Gewicht" name="weight" />

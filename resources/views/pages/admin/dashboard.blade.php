@@ -1,5 +1,9 @@
 @extends('layouts.admin')
 
 @section('content')
-    @livewire('notification-types')
+    <div class="space-y-8">
+        @livewire('notification-types')
+
+        @livewire('admin-nutrition-plans')
+    </div>
 @endsection

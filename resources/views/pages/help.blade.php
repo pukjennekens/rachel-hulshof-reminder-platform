@@ -131,15 +131,10 @@
                     <li>Je hebt het programma niet goed gevolgd, waardoor je bloedsuikerspiegel teveel schommelt</li>
                     <li>Hormonaal (dit geldt alleen voor vrouwen)</li>
                 </ul>
-
                 <p class="font-bold">1. Je resultaat is uitzonderlijk goed. Je hebt een hoge stofwisseling</p>
-
                 <p>Ben je als vrouw tot nu toe gemiddeld 1,5kg per week of meer afgevallen, als man 2kg per week of meer? Heb jij als vrouw een weegresultaat van 2kg of meer ertussen, als man 2,5kg of meer? Dan zeg ik gefeliciteerd! You’re blessed… met een hoge stofwisseling. En dan is het goede nieuws: dan mág je, wat zeg ik, móet je heel veel (voedzaam) eten.</p>
-
                 <p>Hoe hoger je stofwisseling, hoe meer je lichaam dus vraagt om brandstof om goed te kunnen functioneren. Honger is niets anders dan een signaal van het lichaam dat die brandstof nodig heeft. Dus als je honger hebt tijdens Fase 1 Afslanken en je resultaten voldoen aan bovenstaande voorwaarden, dan mag je dus meer eten. Moet je zelfs meer eten! Je lichaam geeft het aan. En je zult zien, hoe meer je eet, hoe beter je lichaam functioneert. Je gaat je beter voelen, minder slap, duizelig, meer energievol. En denk nu alsjeblieft niet: ‘Ga ik dan niet minder afvallen?’ Nee. Geloof me, het zal geen negatieve invloed hebben op je resultaat</p>
-
                 <p>Wat kun je dan extra eten? Het ligt eraan wanneer je vooral een hongermoment ervaart. Hieronder de mogelijkheden</p>
-
                 <ul>
                     <li>
                         <span class="font-bold">Ik vind de tijd tussen de hoofdmaaltijden te lang duren</span><br>Heb je teveel honger tussen je hoofdmaaltijden in, ondanks het tussendoortje wat je mag? Om 11.30 al honger hebben, terwijl je pas om 13.00 uur gaat lunchen of de bekende 16.00 uur dip. Wat je dan kunt doen, is een extra fruit en zuivel moment inlassen of groente eten. Bijvoorbeeld: je luncht om 12.30 uur, eet fruit en zuivel om 14.30 uur en om 16.00 – 16.30 uur eet je nog een keer fruit en zuivel. Of je pakt dan om 16.00 uur een stuk komkommer en tomaat of je eet een salade. Heb je in de ochtend én in de middag teveel honger, eet dan:
@@ -148,29 +143,29 @@
                             <li>in de ochtend een éxtra fruit en zuivel moment en met de lunch een éxtra cracker</li>
                         </ul>
                     </li>
-
                     <li>
                         <span class="font-bold">Ik heb niet genoeg aan mijn ontbijt en/of lunch, ik zit nog niet vol</span><br>Eet dan een cracker extra. Dat mag zowel bij het ontbijt als bij de lunch. Als vrouw eet je dan 3 crackers ’s ochtends en 3 crackers ’s middags, als man eet je dan 4 crackers. Je kunt er ook voor kiezen om alleen bij het ontbijt of alleen bij de lunch een cracker extra te eten. Zorg dat je tijdens de lunch wel goed groente blijft eten. Eet je groente altijd eerst op, daarna pas de crackers, dat geeft meer voldoening. Inspiratieloos met groente in de middag? Kijk hier voor wat variatietips.
                     </li>
-
                     <li><span class="font-bold">Ik heb ’s avonds na het eten trek</span>Neem ’s avonds nog een extra stuk fruit in je toetje. Dat vult meer dan alleen maar zuivel. Doe dat ergens tussen 19.00 en 22.00 uur. Altijd uiterlijk 1 uur voordat je naar bed gaat. Maar de stelregel is: niet met honger naar bed! Heb je echt nog honger laat op de avond? Neem dan nog even een glas melk, bakje yoghurt of vla voordat je naar bed gaat.</li>
-
                     <li><span class="font-bold">Ik heb niet genoeg aan mijn avondeten</span>Kies dan voor optie 1 óf optie 2. Als je tijdens het avondeten teveel honger hebt, komt dat vaak omdat je overdag te weinig eet. Misschien ervaar je dat niet zo, omdat je de hele dag druk bezig bent en je hongergevoel niet voelt. Stress, adrenaline, drukte onderdrukt waar je lichaam eigenlijk wel al heel de dag om vraagt en behoefte aan heeft. Je komt ’s avonds tot rust en dan pas voel je waar je lichaam eigenlijk al heel de dag om vraagt en inmiddels al bijna uitschreeuwt! En dat resulteert in té veel honger en té weinig weerstand, oftewel: 2 volle borden avondeten. Voorkom teveel trek en eet overdag meer. Kies voor optie 1 of 2. Mocht dat niet de oplossing voor je zijn is er nog een alternatief. Eet een halfuur of kwartier voordat je gaat eten alvast wat groente. Terwijl je staat te koken bijvoorbeeld, een stuk komkommer. Of in de auto op weg naar huis, eet je uit je trommeltje wat snoeptomaatjes en stukjes paprika. Je slaat dan 2 vliegen in 1 klap: je eerste honger is al iets gestild en je hebt meteen ook al wat groente op!<br>Een hoge stofwisseling betekent overigens ook dat je goed op gewicht kunt blijven. Je zult zelf misschien tot nu toe in je leven heel anders ervaren, maar geloof me, jij kunt heel goed op gewicht blijven. Dat ga ik je allemaal nog leren. Voor nu: keep up the good work, you’re doing great.</li>
                 </ul>
-
-                <p class="font-bold"></p>
+                <p class="font-bold">2. Je hebt het programma niet goed gevolgd, waardoor je bloedsuikerspiegel teveel schommelt.</p>
+                <p>Een grotere schommeling in je bloedsuikerspiegel veroorzaakt je hongergevoel. Dit resulteert vaak overigens ook in een minder goed weekresultaat. Misschien ben je deze week ook wat minder goed afgevallen? Een grotere schommeling in je bloedsuikerspiegel kan door verschillende factoren veroorzaakt worden. De meest voor de hand liggende is: je hebt gezondigd. Je hebt iets gegeten wat niet in je voedingslijst staat. Snoep, koek, chips, alcohol, calorierijk eten. En dan gaat het niet om hoeveel je hebt gesnoept, gegeten of gedronken. Je bloedsuikerspiegel reageert met een grote schommeling: een hoge piek en een laag dal. En daar heb je last van, dat geeft een onaangenaam gevoel, trek, honger, ‘ik moet iets hebben-gevoel’, een oncontroleerbare ‘urge for something’.</p>
+                <p>Maar ik hoor het je nu denken: ‘Rachel, ik heb echt niks fouts gegeten of gezondigd.’ Niet alleen ‘zondigen’ geeft dit effect, ook het niet goed volgen van je programma kan dit effect geven. Ga daarom in deze lijst nog eens alle stappen na. Zorg dat alle stappen goed gaan. Alles een klein beetje minder goed doen, wordt ook een en-en-en-verhaal waardoor je resultaat minder goed is en je dus ook honger ervaart.</p>
+                <p>Maar geef niet op, er is hoop! Ontsuikeren van je lichaam, het weer stabiliseren van je bloedsuikerspiegel, duurt 3 dagen. Je zult zien dat als je die 3 dagen voorbij bent, je hongergevoel weg is. Uiteraard wel op voorwaarde dat het 3 goed en nauwkeurige Slinc. dagen zijn! </p>
+                <p class="font-bold">3. Hormonaal (dit geldt alleen voor vrouwen)</p>
+                <p>Tja. Hormonaal. Daar kunnen we soms als vrouw gewoon niet omheen. Net voor de menstruatie, tijdens of erna. Voor de eisprong, tijdens of erna. Tijdens de overgang. Hormonen. Soms dodelijk vermoeiend en kunnen echt roet in het eten gooien tijdens het lijnen. Je kunt daar écht last van hebben. Het kan dat ontzettende oncontroleerbare, niet te stoppen ‘urge for something’ gevoel geven. ‘Ik móet echt chocola eten nu’-gevoel.</p>
+                <p>Als je daar last van hebt als vrouw, heb je dat patroon waarschijnlijk al langer en herken je dit gevoel ook van jezelf. Je kunt er helaas niets tegen doen. Mijn enige advies hierin is: als je iets extra’s wilt eten, doe het dan verstandig. Eet een extra bakje yoghurt met zoet fruit voor de zoete trek.</p>
+                <p>Of blijf übercool en bijt erdoorheen, zoek afleiding en ga wat doen. De was strijken, een rondje lopen. Wauw, vechten tegen je hormonen en er met een paar extra grammetjes op de weegschaal uitkomen… gotta admit… dat is wel superstoer!</p>
             </x-faq-list-item>
 
-            <x-faq-list-item title="">
-                
-            </x-faq-list-item>
-
-            <x-faq-list-item title="">
-                
-            </x-faq-list-item>
-
-            <x-faq-list-item title="">
-                
+            <x-faq-list-item title="Is het nodig om opnieuw een appeldag te doen?">
+                <p>Als je even stil staat in gewicht (2 weken of langer) dan is het noodzakelijk om een appeldag te doen. Je lichaam is uit verbranding en zit weer vol afvalstoffen.</p>
+                <p>Een appeldag is niets anders dan een ontslakkingsdag. Ontslakken of ontgiften is nodig om alle afvalstoffen die zich in het vet- en bindweefsel hebben opgeslagen uit het lichaam te onttrekken. Dit is noodzakelijk, anders kan het lichaam geen vet verbranden.</p>
+                <p>Bij het vetverbrandingsproces komen er namelijk nieuwe afvalstoffen vrij. Als er teveel afvalstoffen in het lichaam komen, word je ziek. Het lichaam beschermt zichzelf daartegen en zal geen vet verbranden, zolang er zich nog te veel afvalstoffen in het lichaam bevinden.</p>
+                <p>Als je uit verbranding bent (stil staat in gewicht) dan is een appeldag noodzakelijk. De appeldag is bedoeld om het lichaam optimaal gereed te maken voor vetverbranding. Het is mogelijk dat je deze dag hoofdpijn krijgt, vanwege de nieuwe afvalstoffen die vrijkomen. Hoofdpijn is vervelend, maar wel een goed teken, dat het proces goed in gang is gezet.</p>
+                <p>Daarom is overigens water drinken tijdens het programma ook zo belangrijk. Water zorgt voor de afvoer van afvalstoffen, waardoor het lichaam in staat is om te kunnen vetverbranden.</p>
+                <p>Ben je dus 2 weken of langer rond hetzelfde gewicht, doe dan even opnieuw een appeldag.</p>
             </x-faq-list-item>
         </x-faq-list>
     </div>

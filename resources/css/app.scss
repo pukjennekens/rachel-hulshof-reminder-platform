@@ -65,6 +65,8 @@ body {
 }
 
 .faq-list {
+    @apply pl-0;
+
     & > li {
         @apply py-3;
 
