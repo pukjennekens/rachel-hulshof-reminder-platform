@@ -1,7 +1,7 @@
 <div class="space-y-4">
     <h2 class="text-3xl">Weet je het zeker?</h2>
 
-    <p>Door deze actie uit te voeren verwijder je <span class="font-bold">alle {{ $weightMeasurementsCount }} gewichtsmetingen</span> uit je account. Dit kan niet meer ongedaan worden gemaakt.</p>
+    <p>Door deze actie uit te voeren verwijder je <span class="font-bold">{{ $weightMeasurementsCount <= 1 ? ' 1 gewichtsmeting ' : ' alle ' . $weightMeasurementsCount . ' ' . ' gewichtsmetingen ' }}</span>uit je account. Dit kan niet meer ongedaan worden gemaakt.</p>
 
     <div class="grid sm:grid-cols-2 gap-2">
         <x-button

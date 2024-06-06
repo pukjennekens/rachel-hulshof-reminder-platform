@@ -31,8 +31,8 @@ class SendNotification implements ShouldQueue
         Log::info('Sending notification to ' . $this->notificationPreference->user->email);
 
         $message = CloudMessage::fromArray([
-            'token'        => $this->notificationPreference->user->fcm_token,
-            'notification' => [
+            'token' => $this->notificationPreference->user->fcm_token,
+            'data'  => [
                 'title' => $this->notificationPreference->notificationType->heading ?? $this->notificationPreference->notificationType->name ?? 'Eetmoment',
                 'body'  => $this->notificationPreference->notificationType->subheading ?? 'Het is tijd om te eten!',
             ],
