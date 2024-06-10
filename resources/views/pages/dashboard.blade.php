@@ -28,7 +28,7 @@
                     </span>
                 </div>
 
-                <x-icon name="pijl" size="w-[4rem] h-[4rem]" alignicon="left" />
+                <x-icon name="pijl" size="w-[3rem] sm:w-[4rem] h-[3rem] sm:h-[4rem]" alignicon="left" />
             </a>
 
             <a href="{{ route('water') }}" class="bg-[#bbe7e6] px-8 py-6 rounded-lg flex justify-between items-end gap-4">
@@ -40,7 +40,7 @@
                     <span class="text-4xl font-bold">{{ auth()->user()->todaysWaterIntake }} / {{ $waterIntakeGoal }}</span>
                 </div>
 
-                <x-icon name="pijl" size="w-[4rem] h-[4rem]" alignicon="left" />
+                <x-icon name="pijl" size="w-[3rem] sm:w-[4rem] h-[3rem] sm:h-[4rem]" alignicon="left" />
             </a>
 
             <a href="{{ route('notifications') }}" class="bg-[#f7f7f7] px-8 py-6 rounded-lg flex justify-between items-end gap-4">
@@ -52,7 +52,7 @@
                     <span class="text-4xl font-bold">{{ auth()->user()->checkedOffNotificationsCount }} / {{ auth()->user()->enabledNotificationsCount }}</span>
                 </div>
 
-                <x-icon name="pijl" size="w-[4rem] h-[4rem]" alignicon="left" />
+                <x-icon name="pijl" size="w-[3rem] sm:w-[4rem] h-[3rem] sm:h-[4rem]" alignicon="left" />
             </a>
 
             <a href="https://rachelhulshof.nl/slinc-webshop/" target="_blank" class="bg-[#f7f7f7] px-8 py-6 rounded-lg flex gap-8 justify-between">
