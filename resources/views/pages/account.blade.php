@@ -6,7 +6,7 @@
             <h1 class="text-3xl mb-2">Account</h1>
 
             <p class="font-bold">
-                Hey {{ explode(' ', auth()->user()->name)[0] }}, je kunt hier je persoonlijke informatie aanpassen
+                Hier kun je je persoonlijke gegevens aanpassen en je wachtwoord wijzigen
             </p>
         </div>
 
@@ -16,6 +16,11 @@
 
 @section('content')
     <div class="space-y-6">
+        <div>
+            <h2 class="text-2xl mb-2">Jouw persoonlijke gegevens</h2>
+            @livewire('update-profile-information')
+        </div>
+
         <div>
             <h2 class="text-2xl mb-2">Wachtwoord wijzigen</h2>
             @livewire('change-password')
