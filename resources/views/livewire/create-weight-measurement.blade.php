@@ -27,7 +27,7 @@
 
     <x-input-group>
         <x-input-label label="Datum" name="date" />
-        <x-input-text type="date" name="date" wire:model="date" />
+        <x-input-text type="date" name="date" wire:model="date" class="w-full" />
         <x-input-errors name="date" />
     </x-input-group>
     
