@@ -3,7 +3,7 @@
 @extends('layouts.app')
 
 @section('header')
-    <div class="px-6 pt-4 flex items-center justify-between gap-4">
+    <div class="px-6 py-4 flex items-center justify-between gap-4">
         <div>
             <h1 class="text-3xl mb-2">Welkom</h1>
 
