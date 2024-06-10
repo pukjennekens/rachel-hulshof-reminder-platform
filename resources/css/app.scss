@@ -13,7 +13,7 @@ body {
     }
 }
 
-input,
+input:not([type="checkbox"]),
 select,
 textarea {
     -webkit-appearance: none;
