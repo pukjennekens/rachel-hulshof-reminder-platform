@@ -16,6 +16,11 @@ class CreateWeightMeasurement extends Component
     #[Validate('required|date|before_or_equal:today')]
     public $date;
 
+    public function mount()
+    {
+        $this->date = now()->format('Y-m-d');
+    }
+
     public function save()
     {
         $this->validate();
@@ -25,9 +30,9 @@ class CreateWeightMeasurement extends Component
             'date'   => $this->date,
         ]);
 
-        $this->weight = 70;
+        $this->weight        = 70;
         $this->weightDecimal = 0;
-        $this->date = null;
+        $this->date          = now()->format('Y-m-d');
 
         $this->dispatch('weight-measurement-created');
     }
