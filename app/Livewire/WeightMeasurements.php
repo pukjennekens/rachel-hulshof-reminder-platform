@@ -33,6 +33,7 @@ class WeightMeasurements extends Component
     #[On('weight-measurement-created')]
     #[On('weight-measurement-updated')]
     #[On('weight-measurement-deleted')]
+    #[On('weight-measurements-reset')]
     public function onWeightMeasurementCreated()
     {
         $this->weightMeasurements = auth()->user()->weightMeasurements;
