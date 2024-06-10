@@ -10,7 +10,7 @@
             </p>
         </div>
 
-        <x-icon name="glasdrinken v2" size="w-[3.5rem] h-[3.5rem]" />
+        <x-icon name="glas-drinken" size="w-[3.5rem] h-[3.5rem]" />
     </div>
 @endsection
 

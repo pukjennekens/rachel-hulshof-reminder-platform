@@ -21,7 +21,7 @@
         <div>
             <a href="https://wa.me/message/RBZSISBCLV2NB1" target="_blank" class="bg-[#efd6db] px-8 py-6 rounded-lg flex justify-between items-end gap-4">
                 <div>
-                    <x-icon name="telefoon" size="w-16 h-16" />
+                    <x-icon name="telefoon" size="w-16 h-16" alignicon="left" />
 
                     <p class="text-lg font-bold mt-2">Whatsapp</p>
                 </div>

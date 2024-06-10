@@ -26,8 +26,28 @@ body {
     @apply absolute -top-2 left-0 right-0 h-2 bg-gradient-to-b from-gray-200 to-transparent z-10 transform rotate-180;
 }
 
+.icon-wrapper {
+    @apply inline-flex items-center p-1;
+
+    &.alignicon-left {
+        @apply justify-start;
+    }
+
+    &.alignicon-right {
+        @apply justify-end;
+    }
+
+    &.alignicon-center {
+        @apply justify-center;
+    }
+}
+
+.icon-wrapper svg {
+    @apply max-w-full max-h-full w-min h-min;
+}
+
 .icon-wrapper svg path {
-    @apply stroke-black stroke-[20px] #{!important};
+    @apply stroke-black #{!important};
 }
 
 .icon-button:hover {

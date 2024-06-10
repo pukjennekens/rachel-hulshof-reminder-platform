@@ -10,7 +10,7 @@
             </p>
         </div>
 
-        <x-icon name="formulier" size="w-[3.5rem] h-[3.5rem]" />
+        <x-icon name="checklist" size="w-[3.5rem] h-[3.5rem]" />
     </div>
 @endsection
 
@@ -23,7 +23,7 @@
                 x-data
                 x-on:click="$store.global.notificationsDrawerOpen = true"
             >
-                <x-icon name="wekker v2" />
+                <x-icon name="wekker" />
             </button>
 
             <a href="{{ route('apple-day') }}" class="font-bold inline-flex items-center rounded-full border border-black hover:bg-black hover:text-white transition icon-button">

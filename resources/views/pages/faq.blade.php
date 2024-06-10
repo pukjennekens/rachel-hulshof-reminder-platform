@@ -17,7 +17,7 @@
 @section('content')
     <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
         <a href="https://rachelhulshof.nl/veelgestelde-vragen/bestellen-en-bezorgen/" target="_blank" class="p-2 rounded-lg bg-gray-100 text-center inline-flex flex-col justify-center items-center aspect-square">
-            <x-icon name="appel" size="w-[4rem] h-[3.5rem]" />
+            <x-icon name="busje" size="w-[4rem] h-[3.5rem]" />
             <h2 class="text-sm font-bold mt-2">Bestellen en bezorgen</h2>
         </a>
 
@@ -27,17 +27,17 @@
         </a>
 
         <a href="https://rachelhulshof.nl/veelgestelde-vragen/recepten/#faq" target="_blank" class="p-2 rounded-lg bg-gray-100 text-center inline-flex flex-col justify-center items-center aspect-square">
-            <x-icon name="formulier" size="w-[4rem] h-[3.5rem]" />
+            <x-icon name="recepten" size="w-[4rem] h-[3.5rem]" />
             <h2 class="text-sm font-bold mt-2">Recepten</h2>
         </a>
 
         <a href="https://rachelhulshof.nl/veelgestelde-vragen/over-het-slinc-programma/#faq" target="_blank" class="p-2 rounded-lg bg-gray-100 text-center inline-flex flex-col justify-center items-center aspect-square">
-            <x-icon name="hartslag" size="w-[4rem] h-[3.5rem]" />
+            <x-icon name="slinc-logo" size="w-[4rem] h-[3.5rem]" />
             <h2 class="text-sm font-bold mt-2">Over het Slinc programma</h2>
         </a>
 
         <a href="https://rachelhulshof.nl/veelgestelde-vragen-wat-te-doen-bij/" target="_blank" class="p-2 rounded-lg bg-gray-100 text-center inline-flex flex-col justify-center items-center aspect-square">
-            <x-icon name="appel" size="w-[4rem] h-[3.5rem]" />
+            <x-icon name="medisch" size="w-[4rem] h-[3.5rem]" />
             <h2 class="text-sm font-bold mt-2">Wat te doen bij…</h2>
         </a>
     </div>

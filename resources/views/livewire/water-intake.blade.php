@@ -1,9 +1,8 @@
 <div class="flex gap-4 justify-between items-center">
 
-    {{-- Reset button --}}
     <div>
         <button class="font-bold inline-flex items-center rounded-full border border-black hover:bg-black hover:text-white transition icon-button touch-manipulation" wire:click="decrement">
-            <x-icon name="glasdrinken v2" />
+            <x-icon name="terug" />
         </button>
     </div>
 
@@ -16,10 +15,9 @@
         <div class="absolute transition-all w-[110%] h-[110%] bg-[#bbe7e6] rounded-full left-12" style="top: {{ max(0, 100 - ($waterIntake / $waterIntakeGoal) * 100) }}%"></div>
     </div>
 
-    {{-- Increment button --}}
     <div>
         <button class="font-bold inline-flex items-center rounded-full border border-black hover:bg-black hover:text-white transition icon-button touch-manipulation" wire:click="increment">
-            <x-icon name="hartje" />
+            <x-icon name="druppel" />
         </button>
     </div>
 

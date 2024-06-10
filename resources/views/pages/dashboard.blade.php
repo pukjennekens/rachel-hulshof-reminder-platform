@@ -19,7 +19,7 @@
         <div class="space-y-4">
             <a href="{{ route('weight') }}" class="bg-[#efd6db] px-8 py-6 rounded-lg flex justify-between items-end gap-4">
                 <div>
-                    <x-icon name="weegschaal" size="w-[4rem] h-[4rem]" />
+                    <x-icon name="weegschaal" size="w-[4rem] h-[4rem]" alignicon="left" />
 
                     <p class="text-lg font-bold mb-2">Mijn totale gewichtsverandering:</p>
 
@@ -28,31 +28,43 @@
                     </span>
                 </div>
 
-                <i class="fas fa-chevron-right text-5xl"></i>
+                <x-icon name="pijl" size="w-[4rem] h-[4rem]" alignicon="left" />
             </a>
 
             <a href="{{ route('water') }}" class="bg-[#bbe7e6] px-8 py-6 rounded-lg flex justify-between items-end gap-4">
                 <div>
-                    <x-icon name="glas drinken" size="w-[4rem] h-[4rem]" />
+                    <x-icon name="glas-drinken" size="w-[4rem] h-[4rem]" alignicon="left" />
 
                     <p class="text-lg font-bold mb-2">Aantal glazen water dat ik heb gedronken:</p>
 
                     <span class="text-4xl font-bold">{{ auth()->user()->todaysWaterIntake }} / {{ $waterIntakeGoal }}</span>
                 </div>
 
-                <i class="fas fa-chevron-right text-5xl"></i>
+                <x-icon name="pijl" size="w-[4rem] h-[4rem]" alignicon="left" />
             </a>
 
             <a href="{{ route('notifications') }}" class="bg-[#f7f7f7] px-8 py-6 rounded-lg flex justify-between items-end gap-4">
                 <div>
-                    <x-icon name="formulier" size="w-[4rem] h-[4rem]" />
+                    <x-icon name="checklist" size="w-[4rem] h-[4rem]" alignicon="left" />
 
                     <p class="text-lg font-bold mb-2">Aantal eetmomenten dat ik heb afgerond:</p>
 
                     <span class="text-4xl font-bold">{{ auth()->user()->checkedOffNotificationsCount }} / {{ auth()->user()->enabledNotificationsCount }}</span>
                 </div>
 
-                <i class="fas fa-chevron-right text-5xl"></i>
+                <x-icon name="pijl" size="w-[4rem] h-[4rem]" alignicon="left" />
+            </a>
+
+            <a href="https://rachelhulshof.nl/slinc-webshop/" target="_blank" class="bg-[#f7f7f7] px-8 py-6 rounded-lg flex gap-8 justify-between">
+                <div class="flex gap-4 flex-col">
+                    <p class="text-lg font-bold mb-2">Slinc Shop</p>
+
+                    <img src="{{ asset('images/slinc-potjes.png') }}" alt="Slinc Shop" class="w-1/2 rounded-lg min-w-36">
+                </div>
+
+                <div class="flex items-end justify-end">
+                    <i class="fa-solid fa-arrow-up-right-from-square text-[1.5rem]"></i>
+                </div>
             </a>
         </div>
     </div>

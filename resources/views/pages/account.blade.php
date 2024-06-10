@@ -10,7 +10,7 @@
             </p>
         </div>
 
-        <x-icon name="Slinc_app_account" size="w-[3.5rem] h-[3.5rem]" />
+        <x-icon name="account" size="w-[3.5rem] h-[3.5rem]" />
     </div>
 @endsection
 

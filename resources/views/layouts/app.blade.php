@@ -143,7 +143,7 @@
                 {{-- Active classes: underline font-bold underline-offset-2 --}}
 
                 <a href="{{ route('dashboard') }}" class="inline-flex flex-col items-center">
-                    <x-icon name="hartslag" size="w-[1.75rem] h-[1.7rem] sm:w-[2rem] sm:h-[2rem]" />
+                    <x-icon name="slinc-logo" size="w-[1.75rem] h-[1.7rem] sm:w-[2rem] sm:h-[2rem]" />
                     <span class="text-[0.6rem] sm:text-xs {{ request()->routeIs('dashboard') ? 'underline font-bold underline-offset-2' : '' }}">Dashboard</span>
                 </a>
 
@@ -153,7 +153,7 @@
                 </a>
 
                 <a href="{{ route('water') }}" class="inline-flex flex-col items-center">
-                    <x-icon name="glas drinken" size="w-[1.75rem] h-[1.7rem] sm:w-[2rem] sm:h-[2rem]" />
+                    <x-icon name="glas-drinken" size="w-[1.75rem] h-[1.7rem] sm:w-[2rem] sm:h-[2rem]" />
                     <span class="text-[0.6rem] sm:text-xs {{ request()->routeIs('water') ? 'underline font-bold underline-offset-2' : '' }}">Water</span>
                 </a>
 
@@ -165,7 +165,7 @@
                 <a href="https://rachelhulshof.nl/slinc-webshop/" target="_blank" class="inline-flex flex-col items-center relative">
                     <i class="fa-solid fa-arrow-up-right-from-square text-[0.5rem] absolute right-0 top-0"></i>
 
-                    <x-icon name="telefoon" size="w-[1.75rem] h-[1.7rem] sm:w-[2rem] sm:h-[2rem]" />
+                    <x-icon name="winkelwagen" size="w-[1.75rem] h-[1.7rem] sm:w-[2rem] sm:h-[2rem]" />
                     <span class="text-[0.6rem] sm:text-xs">Slinc shop</span>
                 </a>
             </footer>
