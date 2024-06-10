@@ -10,6 +10,14 @@ Route::view('/register', 'pages.auth.register')
     ->name('register')
     ->middleware(['guest', 'check-welcome-page']);
 
+Route::view('/forgot-password', 'pages.auth.forgot-password')
+    ->name('forgot-password')
+    ->middleware(['guest', 'check-welcome-page']);
+
+Route::view('/reset-password/{token}/{email}', 'pages.auth.reset-password')
+    ->name('password.reset')
+    ->middleware(['guest', 'check-welcome-page']);
+
 Route::get('/logout', function () {
         auth()->logout();
         return redirect()->route('login');
@@ -53,6 +61,10 @@ Route::view('/nutrition-plan', 'pages.nutrition-plan')
     ->name('nutrition-plan')
     ->middleware('auth');
     
+Route::view('/account', 'pages.account')
+    ->name('account')
+    ->middleware('auth');
+
 Route::view('/admin', 'pages.admin.dashboard')
     ->name('admin.dashboard')
     ->middleware('auth', 'is-admin');

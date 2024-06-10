@@ -103,6 +103,8 @@
                             <li><a href="https://rachelhulshof.nl/slinc-webshop/" target="_blank" class="font-bold">Webshop</a></li>
                             <li><a href="https://rachelhulshof.nl/recepten/" target="_blank" class="font-bold">Recepten</a></li>
                             <li><a href="{{ route('contact') }}" class="font-bold {{ request()->routeIs('contact') ? 'underline underline-offset-4' : '' }}">Contact</a></li>
+                            <li><a href="{{ route('account') }}" class="font-bold {{ request()->routeIs('account') ? 'underline underline-offset-4' : '' }}">Account</a></li>
+                            <li><a href="{{ route('logout') }}" class="font-bold">Uitloggen</a></li>
                         </ul>
                     </div>
                 </nav>
@@ -168,7 +170,7 @@
                 </a>
             </footer>
 
-             <div
+            <div
                 class="fixed right-0 bottom-0 md:right-4 md:bottom-4 z-50 space-y-2 max-h-full p-4 overflow-x-auto w-full max-w-80" x-data="{ messages: [] }"
                 x-on:notify.window="
                     const id = new Date().getTime();
