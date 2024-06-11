@@ -126,7 +126,7 @@
                     Meldingen inschakelen
                 </x-button>
 
-                <button x-on:click="helpModalOpen = true" class="font-bold underline mt-2">Werken je meldingen niet?</button>
+                <button x-on:click="helpModalOpen = true" class="font-bold underline mt-2">Werken je meldingen niet of wil je geen meldingen?</button>
 
                 <button type="button" class="absolute top-0 right-0 p-2" x-on:click="$store.global.notificationsMessage.show = false">
                     <i class="fas fa-times"></i>
