@@ -139,7 +139,7 @@
                     <div class="modal-box text-left space-y-4">
                        <h2 class="text-3xl">Mijn meldingen werken niet, wat nu?</h2>
 
-                       <p>Dit kan liggen aan een aantal dingen. Heb je een iPhone? Controlleer dan je IOS versie, deze moet 16.4 of hoger zijn. Heb je de toestemming voor meldingen geweigerd? <a href="https://rachelhulshof.nl/web-app-ik-heb-de-meldingen-per-ongeluk-uitgeschakeld/" target="_blank">Klik dan hier</a> voor de instructies om dit probleem op te lossen.</p>
+                       <p>Dit kan liggen aan een aantal dingen. Heb je een iPhone? controleer dan je IOS versie, deze moet 16.4 of hoger zijn. Heb je de toestemming voor meldingen geweigerd? <a href="https://rachelhulshof.nl/web-app-ik-heb-de-meldingen-per-ongeluk-uitgeschakeld/" target="_blank">Klik dan hier</a> voor de instructies om dit probleem op te lossen.</p>
 
                        <p>Heb je een Samsung/Android telefoon? Dan moet je minimaal Android versie 5.0 hebben, maar een hogere versie is altijd beter voor de werking van de meldingen.</p>
 
@@ -179,7 +179,9 @@
                     <div class="modal-box text-left space-y-4">
                         <h2 class="text-3xl">Mijn meldingen werken niet, wat nu?</h2>
 
-                        <p>De meest waarschijnlijke oorzaak is dat het besturingssysteem van je telefoon niet up-to-date is. Heb je een iPhone? Controlleer dan of je IOS versie 16.4 of hoger is. Heb je een Samsung/Android telefoon? Dan moet je minimaal Android versie 5.0 hebben, maar een hogere versie is altijd beter voor de werking van de meldingen.</p>
+                        <p>Controleer eerst of je de app hebt toegevoegd aan je homescreen, zo niet dan kun je dus geen meldingen ontvangen. Om dit te doen volg dan <a href="https://rachelhulshof.nl/webapp-instructie" target="_blank">deze instructies</a>.</p>
+
+                        <p>De meest waarschijnlijke oorzaak is dat het besturingssysteem van je telefoon niet up-to-date is. Heb je een iPhone? controleer dan of je IOS versie 16.4 of hoger is. Heb je een Samsung/Android telefoon? Dan moet je minimaal Android versie 5.0 hebben, maar een hogere versie is altijd beter voor de werking van de meldingen.</p>
 
                         <p>Helaas zijn er te veel android modellen die gebruik maken van versie 5.0, maar dit is een lijst van alle iPhone modellen die IOS 16.4 ondersteunen:</p>
 
