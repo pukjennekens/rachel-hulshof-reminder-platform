@@ -126,18 +126,18 @@
                     Meldingen inschakelen
                 </x-button>
 
-                <button x-on:click="helpModalOpen = true" class="font-bold underline mt-2">Werken je meldingen niet of wil je geen meldingen?</button>
+                {{-- <button x-on:click="helpModalOpen = true" class="font-bold underline mt-2">Werken je meldingen niet of wil je geen meldingen?</button> --}}
 
                 <button type="button" class="absolute top-0 right-0 p-2" x-on:click="$store.global.notificationsMessage.show = false">
                     <i class="fas fa-times"></i>
                 </button>
 
-                <div
+                {{-- <div
                     class="modal"
                     :class="{ 'modal-open': helpModalOpen }"
                 >
                     <div class="modal-box text-left space-y-4">
-                       <h2 class="text-3xl">Mijn meldingen werken niet, wat nu?</h2>
+                       <h2 class="text-3xl">Mijn meldingen werken?</h2>
 
                        <p>Controleer ten eerste of je de app hebt toegevoegd aan je homescreen, <a href="https://rachelhulshof.nl/webapp-instructie" target="_blank">bekijk hier de instructie</a>.</p>
 
@@ -151,7 +151,7 @@
                             Sluiten
                         </x-button>
                     </div>
-                </div>
+                </div> --}}
             </div>
 
             <div 
