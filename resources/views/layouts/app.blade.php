@@ -112,7 +112,7 @@
                 class="bg-primary p-4 pb-8 flex flex-col items-center gap-2 text-center relative"
                 x-data="{ helpModalOpen: false }"
                 x-cloak
-                x-show="$store.global.notificationsMessage.show && !notificationsNotSupportedMessageDismissed"
+                x-show="$store.global.notificationsMessage.show"
             >
                 <x-icon name="brrrrrrr" size="w-[5rem] h-[5rem]"/>
 
