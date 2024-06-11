@@ -156,7 +156,7 @@
                 class="bg-primary px-6 py-8 flex flex-col items-start gap-2 text-left relative"
                 x-data="{ helpModalOpen: false }"
                 x-cloak
-                x-show="!$store.global.notificationsSupported"
+                x-show="$store.global.notificationsSupported && !$store.global.notificationsNotSupportedMessageDismissed"
             >
                 <h3 class="text-2xl">Meldingen zijn niet ondersteund op dit apparaat</h3>
 
@@ -181,36 +181,7 @@
 
                         <p>Controleer eerst of je de app hebt toegevoegd aan je homescreen, zo niet dan kun je dus geen meldingen ontvangen. Om dit te doen volg dan <a href="https://rachelhulshof.nl/webapp-instructie" target="_blank">deze instructies</a>.</p>
 
-                        <p>De meest waarschijnlijke oorzaak is dat het besturingssysteem van je telefoon niet up-to-date is. Heb je een iPhone? controleer dan of je IOS versie 16.4 of hoger is. Heb je een Samsung/Android telefoon? Dan moet je minimaal Android versie 5.0 hebben, maar een hogere versie is altijd beter voor de werking van de meldingen.</p>
-
-                        <p>Helaas zijn er te veel android modellen die gebruik maken van versie 5.0, maar dit is een lijst van alle iPhone modellen die IOS 16.4 ondersteunen:</p>
-
-                        <ul>
-                            <li>iPhone SE (2e generatie)</li>
-                            <li>iPhone SE (3e generatie)</li>
-                            <li>iPhone 8 Plus</li>
-                            <li>iPhone 8</li>
-                            <li>iPhone X</li>
-                            <li>iPhone XR</li>
-                            <li>iPhone XS Max</li>
-                            <li>iPhone XS</li>
-                            <li>iPhone 11 Pro Max</li>
-                            <li>iPhone 11 Pro</li>
-                            <li>iPhone 11</li>
-                            <li>iPhone 12 Pro Max</li>
-                            <li>iPhone 12 Pro</li>
-                            <li>iPhone 12 mini</li>
-                            <li>iPhone 12</li>
-                            <li>iPhone 13 Pro Max</li>
-                            <li>iPhone 13 Pro</li>
-                            <li>iPhone 13 mini</li>
-                            <li>iPhone 13</li>
-                            <li>iPhone 14 Pro Max</li>
-                            <li>iPhone 14 Pro</li>
-                            <li>iPhone 14 Plus</li>
-                            <li>iPhone 14</li>
-                            <li>En alle nieuwe modellen</li>
-                        </ul>
+                        <p>De meest waarschijnlijke oorzaak is dat het besturingssysteem van je telefoon niet up-to-date is. Heb je een iPhone? Controleer dan of je IOS versie 16.4 of hoger is. Heb je een Samsung/Android telefoon? Dan moet je minimaal Android versie 5.0 hebben, maar een hogere versie is altijd beter voor de werking van de meldingen. Is je versie lager? Doe dan een software update</p>
 
                         <p>Heb je deze instructies gevolgd en werkt het nog steeds niet? Neem dan contact op met de klantenservice.</p>
 

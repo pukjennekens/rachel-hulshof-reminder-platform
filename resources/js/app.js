@@ -33,7 +33,7 @@ Alpine.store("global", {
             "notificationsNotSupportedMessageDismissed",
             "true"
         );
-        this.notificationsNotSupportedMessageDismissed = true;
+        this.notificationsNotSupportedMessageDismissed = "true";
     },
 });
 
