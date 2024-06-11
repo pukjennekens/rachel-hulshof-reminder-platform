@@ -112,7 +112,7 @@
                 class="bg-primary p-4 pb-8 flex flex-col items-center gap-2 text-center relative"
                 x-data="{ helpModalOpen: false }"
                 x-cloak
-                x-show="$store.global.notificationsMessage.show"
+                x-show="true || $store.global.notificationsMessage.show && !notificationsNotSupportedMessageDismissed"
             >
                 <x-icon name="brrrrrrr" size="w-[5rem] h-[5rem]"/>
 
@@ -133,7 +133,6 @@
                 </button>
 
                 <div
-                    x-on:keydown.escape.window="closeModalOnEscape()"
                     class="modal"
                     :class="{ 'modal-open': helpModalOpen }"
                 >
@@ -143,6 +142,8 @@
                        <p>Dit kan liggen aan een aantal dingen. Heb je een iPhone? Controlleer dan je IOS versie, deze moet 16.4 of hoger zijn. Heb je de toestemming voor meldingen geweigerd? <a href="https://rachelhulshof.nl/web-app-ik-heb-de-meldingen-per-ongeluk-uitgeschakeld/" target="_blank">Klik dan hier</a> voor de instructies om dit probleem op te lossen.</p>
 
                        <p>Heb je een Samsung/Android telefoon? Dan moet je minimaal Android versie 5.0 hebben, maar een hogere versie is altijd beter voor de werking van de meldingen.</p>
+
+                        <p>Wil je toch doorgaan zonder meldingen? Dat is jammer, maar het kan. Houd er wel rekening mee dat je dan geen notificaties ontvangt voor je eetmomenten. Als je hiervoor kiest maar op een later moment wel weer meldingen wil inschakelen, dan moet je de webapp opnieuw installeren. <button class="font-bold underline" type="button" x-on:click="$store.global.dismissNotificationsNotSupportedMessage(); helpModalOpen = false">Doorgaan zonder meldingen</button></p>
 
                         <x-button type="button" x-on:click="helpModalOpen = false">
                             Sluiten
@@ -172,7 +173,6 @@
                 </x-button>
 
                 <div
-                    x-on:keydown.escape.window="closeModalOnEscape()"
                     class="modal"
                     :class="{ 'modal-open': helpModalOpen }"
                 >
