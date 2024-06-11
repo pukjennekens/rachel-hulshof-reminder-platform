@@ -7,7 +7,7 @@
 
     <x-input-group>
         <x-input-label label="Wachtwoord" name="password" />
-        <x-input-text type="password" name="password" placeholder="Vul je wachtwoord in" wire:model="form.password" />
+        <x-input-password placeholder="Vul je wachtwoord in" name="password" wire:model="form.password" />
         <x-input-errors name="form.password" />
     </x-input-group>
 

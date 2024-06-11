@@ -8,7 +8,7 @@
         <title>@yield('title')</title>
 
         <!-- Font Awesome -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
         <!-- Scripts -->
         @vite(['resources/js/app.js', 'resources/css/guest.scss', 'resources/css/global.scss'])

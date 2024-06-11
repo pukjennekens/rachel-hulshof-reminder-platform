@@ -6,7 +6,7 @@
             <h1 class="text-3xl mb-2">Veelgestelde vragen</h1>
 
             <p class="font-bold">
-                Zoek jou vraag hier op en krijg direct antwoord
+                Zoek jouw vraag hier op en krijg direct antwoord
             </p>
         </div>
 
