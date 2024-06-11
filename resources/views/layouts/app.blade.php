@@ -156,7 +156,7 @@
                 class="bg-primary px-6 py-8 flex flex-col items-start gap-2 text-left relative"
                 x-data="{ helpModalOpen: false }"
                 x-cloak
-                x-show="$store.global.notificationsSupported && !$store.global.notificationsNotSupportedMessageDismissed"
+                x-show="!$store.global.notificationsSupported && !$store.global.notificationsNotSupportedMessageDismissed"
             >
                 <h3 class="text-2xl">Meldingen zijn niet ondersteund op dit apparaat</h3>
 
