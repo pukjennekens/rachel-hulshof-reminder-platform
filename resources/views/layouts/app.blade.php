@@ -156,7 +156,7 @@
                 class="bg-primary px-6 py-8 flex flex-col items-start gap-2 text-left relative"
                 x-data="{ helpModalOpen: false }"
                 x-cloak
-                x-show="!$store.global.notificationsSupported && !$store.global.notificationsNotSupportedMessageDismissed"
+                x-show="$store.global.notificationsSupported && !$store.global.notificationsNotSupportedMessageDismissed"
             >
                 <h3 class="text-2xl">Meldingen zijn niet ondersteund op dit apparaat</h3>
 
@@ -166,11 +166,9 @@
 
                 <x-button x-on:click="helpModalOpen = true">Mijn meldingen werken niet, wat nu?</x-button>
 
-                <p>Wil je de app gebruiken zonder meldingen? Dat kan, maar houd er rekening mee dat je dan geen notificaties ontvangt voor je eetmomenten. Als je hiervoor kiest maar op een later moment wel weer meldingen wil inschakelen, dan moet je de webapp opnieuw installeren.</p>
-
-                <x-button type="button" x-on:click="$store.global.dismissNotificationsNotSupportedMessage()">
-                    Doorgaan zonder meldingen
-                </x-button>
+                <p class="mt-6">
+                    Wil je deze pop-up niet meer ontvangen? <button class="font-bold underline" type="button" x-on:click="$store.global.dismissNotificationsNotSupportedMessage()">Klik hier</button>
+                </p>
 
                 <div
                     class="modal"
