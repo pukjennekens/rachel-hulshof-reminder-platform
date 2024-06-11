@@ -25,5 +25,30 @@
             <h2 class="text-2xl mb-2">Wachtwoord wijzigen</h2>
             @livewire('change-password')
         </div>
+
+        <div>
+            <h2 class="text-2xl mb-2">Account verwijderen</h2>
+
+            <p class="mb-2">
+                Wil je je account verwijderen? Dat kan, maar deze actie is onomkeerbaar. Je account wordt direct verwijderd en al je gegevens worden gewist.
+            </p>
+
+            <div x-data="{ confirm: false }">
+                <x-button type="button" x-on:click="confirm = true;" x-cloak x-show="!confirm">
+                    Account verwijderen
+                </x-button>
+
+                <x-button 
+                    type="button"
+                    x-cloak
+                    x-show="confirm"
+                    x-on:click="confirm = false; Livewire.dispatch('openModal', {component: 'delete-account'});"
+                    x-on:click.away="confirm = false;"
+                    x-on:keydown.escape.window="confirm = false;"
+                >
+                    Weet je het zeker?
+                </x-button>
+            </div>
+        </div>
     </div>
 @endsection
