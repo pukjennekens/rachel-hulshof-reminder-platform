@@ -161,7 +161,7 @@
                 <h3 class="text-2xl">Meldingen zijn niet ondersteund op dit apparaat</h3>
 
                 <p>
-                    Helaas worden meldingen voor eetmomenten niet ondersteund op jouw apparaat, je kunt wel de rest van de functionaliteiten van de app gebruiken. Wil je ze tóch graag ontvangen? Bekijk dan de onderstaande instructies om te kijken of je hier wellicht nog iets aan kan doen
+                    Helaas worden meldingen voor eetmomenten niet ondersteund op jouw apparaat, je kunt wel de rest van de functionaliteiten van de app gebruiken. Wil je ze tóch graag ontvangen? Bekijk dan de onderstaande instructie.
                 </p>
 
                 <x-button x-on:click="helpModalOpen = true">Mijn meldingen werken niet, wat nu?</x-button>
