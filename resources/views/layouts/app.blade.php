@@ -143,7 +143,7 @@
 
                        <p>Heb je een Samsung/Android telefoon? Dan moet je minimaal Android versie 5.0 hebben, maar een hogere versie is altijd beter voor de werking van de meldingen.</p>
 
-                        <p>Wil je toch doorgaan zonder meldingen? Dat is jammer, maar het kan. Houd er wel rekening mee dat je dan geen notificaties ontvangt voor je eetmomenten. Als je hiervoor kiest maar op een later moment wel weer meldingen wil inschakelen, dan moet je de webapp opnieuw installeren. <button class="font-bold underline" type="button" x-on:click="$store.global.dismissNotificationsNotSupportedMessage(); helpModalOpen = false">Doorgaan zonder meldingen</button></p>
+                        <p>Wil je toch doorgaan zonder meldingen? Dat is jammer, maar het kan. In het menu van je eetmomenten kun je dit aanpassen.</p>
 
                         <x-button type="button" x-on:click="helpModalOpen = false">
                             Sluiten
