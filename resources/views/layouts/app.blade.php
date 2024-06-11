@@ -179,9 +179,9 @@
                     <div class="modal-box text-left space-y-4">
                         <h2 class="text-3xl">Mijn meldingen werken niet, wat nu?</h2>
 
-                        <p>Controleer eerst of je de app hebt toegevoegd aan je homescreen, zo niet dan kun je dus geen meldingen ontvangen. Om dit te doen volg dan <a href="https://rachelhulshof.nl/webapp-instructie" target="_blank">deze instructies</a>.</p>
+                        <p>Controleer ten eerste of je de app hebt toegevoegd aan je homescreen, <a href="https://rachelhulshof.nl/webapp-instructie" target="_blank">bekijk hier de instructie</a>.</p>
 
-                        <p>De meest waarschijnlijke oorzaak is dat het besturingssysteem van je telefoon niet up-to-date is. Heb je een iPhone? Controleer dan of je IOS versie 16.4 of hoger is. Heb je een Samsung/Android telefoon? Dan moet je minimaal Android versie 5.0 hebben, maar een hogere versie is altijd beter voor de werking van de meldingen. Is je versie lager? Doe dan een software update</p>
+                        <p>Werken de meldingen nog niet? Dan is het waarschijnlijk dat het besturingssysteem van je telefoon niet up-to-date is. Heb je een iPhone? Controleer dan of je IOS versie 16.4 of hoger is. Heb je een Samsung/Android telefoon? Dan moet je minimaal Android versie 5.0 hebben, maar een hogere versie is altijd beter voor de werking van de meldingen. Is je versie lager? Doe dan een software update.</p>
 
                         <p>Heb je deze instructies gevolgd en werkt het nog steeds niet? Neem dan contact op met de klantenservice.</p>
 
