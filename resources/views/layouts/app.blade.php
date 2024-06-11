@@ -109,8 +109,8 @@
             </main>
 
             <div 
-                class="bg-primary p-4 flex flex-col items-center gap-2 text-center relative"
-                x-data
+                class="bg-primary p-4 pb-8 flex flex-col items-center gap-2 text-center relative"
+                x-data="{ helpModalOpen: false }"
                 x-cloak
                 x-show="$store.global.notificationsMessage.show"
             >
@@ -126,9 +126,97 @@
                     Meldingen inschakelen
                 </x-button>
 
+                <button x-on:click="helpModalOpen = true" class="font-bold underline mt-2">Werken je meldingen niet?</button>
+
                 <button type="button" class="absolute top-0 right-0 p-2" x-on:click="$store.global.notificationsMessage.show = false">
                     <i class="fas fa-times"></i>
                 </button>
+
+                <div
+                    x-on:keydown.escape.window="closeModalOnEscape()"
+                    class="modal"
+                    :class="{ 'modal-open': helpModalOpen }"
+                >
+                    <div class="modal-box text-left space-y-4">
+                       <h2 class="text-3xl">Mijn meldingen werken niet, wat nu?</h2>
+
+                       <p>Dit kan liggen aan een aantal dingen. Heb je een iPhone? Controlleer dan je IOS versie, deze moet 16.4 of hoger zijn. Heb je de toestemming voor meldingen geweigerd? <a href="https://rachelhulshof.nl/web-app-ik-heb-de-meldingen-per-ongeluk-uitgeschakeld/" target="_blank">Klik dan hier</a> voor de instructies om dit probleem op te lossen.</p>
+
+                       <p>Heb je een Samsung/Android telefoon? Dan moet je minimaal Android versie 5.0 hebben, maar een hogere versie is altijd beter voor de werking van de meldingen.</p>
+
+                        <x-button type="button" x-on:click="helpModalOpen = false">
+                            Sluiten
+                        </x-button>
+                    </div>
+                </div>
+            </div>
+
+            <div 
+                class="bg-primary px-6 py-8 flex flex-col items-start gap-2 text-left relative"
+                x-data="{ helpModalOpen: false }"
+                x-cloak
+                x-show="!$store.global.notificationsSupported"
+            >
+                <h3 class="text-2xl">Meldingen zijn niet ondersteund op dit apparaat</h3>
+
+                <p>
+                    Helaas worden meldingen voor eetmomenten niet ondersteund op jouw apparaat, je kunt wel de rest van de functionaliteiten van de app gebruiken. Wil je ze tóch graag ontvangen? Bekijk dan de onderstaande instructies om te kijken of je hier wellicht nog iets aan kan doen
+                </p>
+
+                <x-button x-on:click="helpModalOpen = true">Mijn meldingen werken niet, wat nu?</x-button>
+
+                <p>Wil je de app gebruiken zonder meldingen? Dat kan, maar houd er rekening mee dat je dan geen notificaties ontvangt voor je eetmomenten. Als je hiervoor kiest maar op een later moment wel weer meldingen wil inschakelen, dan moet je de webapp opnieuw installeren.</p>
+
+                <x-button type="button" x-on:click="$store.global.dismissNotificationsNotSupportedMessage()">
+                    Doorgaan zonder meldingen
+                </x-button>
+
+                <div
+                    x-on:keydown.escape.window="closeModalOnEscape()"
+                    class="modal"
+                    :class="{ 'modal-open': helpModalOpen }"
+                >
+                    <div class="modal-box text-left space-y-4">
+                        <h2 class="text-3xl">Mijn meldingen werken niet, wat nu?</h2>
+
+                        <p>De meest waarschijnlijke oorzaak is dat het besturingssysteem van je telefoon niet up-to-date is. Heb je een iPhone? Controlleer dan of je IOS versie 16.4 of hoger is. Heb je een Samsung/Android telefoon? Dan moet je minimaal Android versie 5.0 hebben, maar een hogere versie is altijd beter voor de werking van de meldingen.</p>
+
+                        <p>Helaas zijn er te veel android modellen die gebruik maken van versie 5.0, maar dit is een lijst van alle iPhone modellen die IOS 16.4 ondersteunen:</p>
+
+                        <ul>
+                            <li>iPhone SE (2e generatie)</li>
+                            <li>iPhone SE (3e generatie)</li>
+                            <li>iPhone 8 Plus</li>
+                            <li>iPhone 8</li>
+                            <li>iPhone X</li>
+                            <li>iPhone XR</li>
+                            <li>iPhone XS Max</li>
+                            <li>iPhone XS</li>
+                            <li>iPhone 11 Pro Max</li>
+                            <li>iPhone 11 Pro</li>
+                            <li>iPhone 11</li>
+                            <li>iPhone 12 Pro Max</li>
+                            <li>iPhone 12 Pro</li>
+                            <li>iPhone 12 mini</li>
+                            <li>iPhone 12</li>
+                            <li>iPhone 13 Pro Max</li>
+                            <li>iPhone 13 Pro</li>
+                            <li>iPhone 13 mini</li>
+                            <li>iPhone 13</li>
+                            <li>iPhone 14 Pro Max</li>
+                            <li>iPhone 14 Pro</li>
+                            <li>iPhone 14 Plus</li>
+                            <li>iPhone 14</li>
+                            <li>En alle nieuwe modellen</li>
+                        </ul>
+
+                        <p>Heb je deze instructies gevolgd en werkt het nog steeds niet? Neem dan contact op met de klantenservice.</p>
+
+                        <x-button type="button" x-on:click="helpModalOpen = false">
+                            Sluiten
+                        </x-button>
+                    </div>
+                </div>
             </div>
 
             <footer class="w-full bg-white h-24 shadow-top z-40 flex items-center justify-center gap-6 top-shadow pb-6">

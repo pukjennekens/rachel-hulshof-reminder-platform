@@ -24,6 +24,17 @@ Alpine.store("global", {
     notificationsMessage: {
         show: false,
     },
+    notificationsSupported: "Notification" in window,
+    notificationsNotSupportedMessageDismissed:
+        localStorage.getItem("notificationsNotSupportedMessageDismissed") ===
+        "true",
+    dismissNotificationsNotSupportedMessage() {
+        localStorage.setItem(
+            "notificationsNotSupportedMessageDismissed",
+            "true"
+        );
+        this.notificationsNotSupportedMessageDismissed = true;
+    },
 });
 
 Livewire.start();
