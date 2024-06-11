@@ -20,10 +20,7 @@
         <!-- Scripts -->
         @vite(['resources/js/app.js', 'resources/css/guest.scss', 'resources/css/welcome.scss'])
 
-        <link rel="apple-touch-icon" href="/images/logos/slinc-logo-192x192.png">
-        <link rel="apple-touch-startup-image" href="/images/logos/slinc-logo-192x192.png">
-        <link rel="apple-touch-startup-image" href="/images/logos/slinc-logo-text-512-512.png">
-        <link rel="manifest" href="/manifest.json">
+        @include('layouts.global.icons')
 
         @livewireStyles
     </head>

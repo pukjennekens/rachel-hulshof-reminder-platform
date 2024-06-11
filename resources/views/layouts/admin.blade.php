@@ -11,6 +11,8 @@
     <!-- Scripts -->
     @vite(['resources/js/admin.js', 'resources/css/admin.scss', 'resources/css/global.scss'])
 
+    @include('layouts.global.icons')
+
     @livewireStyles
 </head>
 <body class="min-h-screen font-sans antialiased bg-gray-100">
