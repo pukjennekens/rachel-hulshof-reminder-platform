@@ -3,6 +3,7 @@
 namespace App\Livewire;
 
 use App\Models\NotificationType;
+use Illuminate\Support\Facades\Log;
 use Livewire\Component;
 
 class NotificationSettings extends Component
@@ -17,11 +18,17 @@ class NotificationSettings extends Component
      */
     public $notificationTimes = [];
 
+    /**
+     * @var array<int, bool>
+     */
+    public $receiveNotifications = [];
+
     public function mount()
     {
         $this->notificationTypes = NotificationType::all();
 
-        $this->notificationTimes = auth()->user()->notificationPreferences->pluck('notification_time', 'notification_type_id')->toArray();
+        $this->notificationTimes    = auth()->user()->notificationPreferences->pluck('notification_time', 'notification_type_id')->toArray();
+        $this->receiveNotifications = auth()->user()->notificationPreferences->pluck('receive_notification', 'notification_type_id')->toArray();
 
         $this->notificationTypes->each(function ($notificationType) {
             if (!array_key_exists($notificationType->id, $this->notificationTimes)) {
@@ -66,22 +73,25 @@ class NotificationSettings extends Component
         $this->dispatch('notification-toggled', $notificationTypeId);
     }
 
-    public function updateNotification($notificationTypeId, $time)
+    public function updateNotification($notificationTypeId, $time = null, $receive_notification = null)
     {
         if (!auth()->user()->hasNotificationPreferenceEnabled($notificationTypeId)) {
             $this->dispatch('notify', type: 'error', message: 'Melding is niet ingeschakeld');
             return;
         }
 
-        if (!preg_match('/^(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$/', $time)) return;
+        $data = [];
 
-        auth()->user()->notificationPreferences()->where('notification_type_id', $notificationTypeId)->update([
-            'notification_time' => $time,
-        ]);
+        if($time !== null && preg_match('/^(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$/', $time)) $data['notification_time'] = $time;
 
-        $this->notificationTimes[$notificationTypeId] = $time;
+        if($receive_notification !== null) $data['receive_notification'] = $receive_notification;
 
-        $this->dispatch('notify', type: 'success', message: 'Meldingstijd bijgewerkt');
+        auth()->user()->notificationPreferences()->where('notification_type_id', $notificationTypeId)->update($data);
+
+        if($time !== null && preg_match('/^(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$/', $time)) $this->notificationTimes[$notificationTypeId] = $time;
+        if($receive_notification !== null) $this->receiveNotifications[$notificationTypeId] = $receive_notification;
+
+        $this->dispatch('notify', type: 'success', message: 'Melding bijgewerkt');
 
         $this->dispatch('notification-updated', $notificationTypeId);
     }

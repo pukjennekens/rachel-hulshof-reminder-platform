@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Log;
 
 class UserNotificationPreference extends Model
 {
-    protected $fillable = ['user_id', 'notification_type_id', 'notification_time'];
+    protected $fillable = ['user_id', 'notification_type_id', 'notification_time', 'receive_notification'];
 
     /**
      * Get the user for the user notification preference.
