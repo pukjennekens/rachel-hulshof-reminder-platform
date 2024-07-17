@@ -37,9 +37,15 @@ class AdminNutritionPlan extends ModalComponent
     {
         $this->validate();
 
+        $latestOrder = NutritionPlan::query()
+            ->select('order')
+            ->orderBy('order', 'desc')
+            ->first();
+
         $this->nutritionPlan->name       = $this->name;
         $this->nutritionPlan->category_a = $this->category_a;
         $this->nutritionPlan->category_b = $this->category_b;
+        $this->nutritionPlan->order      = $latestOrder ? $latestOrder->order + 1 : 0;
         $this->nutritionPlan->save();
 
         $this->dispatch('notify', type: 'success', message: 'Opgeslagen!');

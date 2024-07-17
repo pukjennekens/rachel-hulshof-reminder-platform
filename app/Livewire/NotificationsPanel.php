@@ -35,6 +35,8 @@ class NotificationsPanel extends Component
 
                 $this->notificationTimes[$notificationType->id] = Carbon::parse($notificationPreference->notification_time)->format('H:i');
 
+                $notificationType->receive_notification = $notificationPreference->receive_notification;
+
                 return $notificationType;
             });
     }

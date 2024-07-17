@@ -10,5 +10,6 @@ class NutritionPlan extends Model
         'name',
         'category_a',
         'category_b',
+        'order',
     ];
 }

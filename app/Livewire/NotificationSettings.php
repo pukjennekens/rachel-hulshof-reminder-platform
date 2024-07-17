@@ -59,13 +59,15 @@ class NotificationSettings extends Component
                 'notification_time'    => $default_time,
             ]);
 
-            $this->notificationTimes[$notificationTypeId] = $default_time;
+            $this->notificationTimes[$notificationTypeId]    = $default_time;
+            $this->receiveNotifications[$notificationTypeId] = true;
 
             $this->dispatch('notify', type: 'success', message: 'Melding ingeschakeld');
         } else {
             auth()->user()->notificationPreferences()->where('notification_type_id', $notificationTypeId)->delete();
 
-            $this->notificationTimes[$notificationTypeId] = NotificationType::find($notificationTypeId)->default_time;
+            $this->notificationTimes[$notificationTypeId]    = NotificationType::find($notificationTypeId)->default_time;
+            $this->receiveNotifications[$notificationTypeId] = false;
 
             $this->dispatch('notify', type: 'success', message: 'Melding uitgeschakeld');
         }

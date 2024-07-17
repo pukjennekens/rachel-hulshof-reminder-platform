@@ -10,7 +10,7 @@ class NutritionPlans extends Component
     public function render()
     {
         return view('livewire.nutrition-plans', [
-            'nutritionPlans' => NutritionPlan::all(),
+            'nutritionPlans' => NutritionPlan::all()->sortBy('order')
         ]);
     }
 }

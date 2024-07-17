@@ -23,15 +23,25 @@
                                 <tr>
                                     <th></th>
                                     <th>Naam</th>
+                                    <th>Volgorde</th>
                                     <th></th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach($nutritionPlans as $nutritionPlan)
-                                    <tr class="hover">
+                                    <tr class="hover" wire:key="{{ $nutritionPlan->id }}">
                                         <th>{{ $loop->iteration }}</th>
                                         
                                         <td>{{ $nutritionPlan->name }}</td>
+
+                                        <td>
+                                            <input 
+                                                type="number" 
+                                                class="input input-bordered input-sm"
+                                                value="{{ $nutritionPlan->order }}"
+                                                wire:change="updateOrder({{ $nutritionPlan->id }}, $event.target.value)"
+                                            />
+                                        </td>
                                         
                                         <th class="text-right flex gap-2 justify-end">
                                             <button class="btn btn-sm btn-warning" wire:click="$dispatch('openModal', {component: 'admin-nutrition-plan', arguments: { nutritionPlanId: {{ $nutritionPlan->id }} }})">
